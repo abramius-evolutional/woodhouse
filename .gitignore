@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+
+# Media
+web/code/media/products
+web/code/media/slider
+
+# Node modules
+web/code/static/shop/node_modules
+
+# DataBase
+db/data
+
+# Migrations
+migrations
+
+.DS_Store
+.idea/

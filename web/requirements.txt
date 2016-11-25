@@ -1,0 +1,8 @@
+Django==1.9.6
+psycopg2==2.5.1
+djangorestframework==2.3.13
+markdown==2.4
+django-filter
+requests
+Pillow
+dj-static==0.0.6

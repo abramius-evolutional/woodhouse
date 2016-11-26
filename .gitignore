@@ -10,8 +10,7 @@ __pycache__/
 .Python
 
 # Media
-web/code/media/products
-web/code/media/slider
+web/code/media/
 
 # Node modules
 web/code/static/shop/node_modules

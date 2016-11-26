@@ -23,3 +23,5 @@ migrations
 
 .DS_Store
 .idea/
+
+*.pyc

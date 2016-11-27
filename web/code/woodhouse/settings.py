@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd%lms678jd9@*mf*x@kd#&a6%z=qvv6@!9%2_8l#igri0&alp-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'content',
+    'request',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -84,7 +85,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 
 
 # Password validation

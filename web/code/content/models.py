@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-from datetime import datetime
+from django.utils import timezone
 import uuid
 
 
@@ -63,7 +63,7 @@ class WorkImage(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=200, verbose_name='Название')
     description = models.TextField(default='', blank=True, verbose_name='Описание')
-    dt = models.DateTimeField(default=datetime.now, verbose_name='Дата новости')
+    dt = models.DateTimeField(default=timezone.now, verbose_name='Дата новости')
     def __unicode__(self):
         return self.title
     class Meta:
@@ -88,7 +88,7 @@ class NewsImage(models.Model):
 class Comment(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок')
     description = models.TextField(default='', blank=True, verbose_name='Описание')
-    dt = models.DateTimeField(default=datetime.now, verbose_name='Дата новости')
+    dt = models.DateTimeField(default=timezone.now, verbose_name='Дата новости')
     work_item = models.ForeignKey(WorkItem, blank=True, null=True, 
         related_name='comments', verbose_name='Связанная работа')
     class Meta:

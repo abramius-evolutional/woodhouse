@@ -13,4 +13,4 @@ def content_provider(request, model_name):
         serializer = serializer_cls(objects, many=True)
         return ApiResponse(serializer.data)
 
-    return ApiResponse({'status': 'not found'}, 404)
+    return ApiResponse({'status': 'model has not been found'}, 404)

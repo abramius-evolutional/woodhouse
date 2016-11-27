@@ -24,6 +24,9 @@ class KeyIndicatorAdmin(admin.ModelAdmin):
 
 class AboutCompanyAdmin(admin.ModelAdmin):
     list_display = ('title', 'name', 'phone')
+    def has_add_permission(self, request):
+        return False if self.model.objects.count() > 0 else \
+            super(AboutCompanyAdmin, self).has_add_permission(request)
 
 class NewsImageInline(admin.StackedInline):
     readonly_fields = ('image_tag',)

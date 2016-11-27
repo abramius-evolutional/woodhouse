@@ -2,6 +2,7 @@ from rest_framework import serializers
 import models
 import json
 
+
 class KeyIndicatorSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.KeyIndicator

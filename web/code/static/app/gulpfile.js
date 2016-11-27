@@ -87,6 +87,12 @@ gulp.task('copyFonts', function () {
 		.pipe(remember('copyFonts'))
 		.pipe(gulp.dest('dist/fonts'));
 });
+gulp.task('copyAdmin', function () {
+    return gulp.src('src/admin/**/*.*')
+        .pipe(cached('copyAdmin'))
+        .pipe(remember('copyAdmin'))
+        .pipe(gulp.dest('dist/admin'));
+});
 
 
 gulp.task('clean', function() {
@@ -120,6 +126,10 @@ gulp.task('watch', function() {
         remember.forget('copyFonts', path.resolve(filepath));
         delete cached.caches.copyImg[path.resolve(filepath)];
     });
+    gulp.watch('src/admin/**/*.*', gulp.series('copyAdmin')).on('unlink', function(filepath) {
+        remember.forget('copyAdmin', path.resolve(filepath));
+        delete cached.caches.copyAdmin[path.resolve(filepath)];
+    });
     gulp.watch('src/js/**', gulp.series('browserify')).on('unlink', function(filepath) {
         remember.forget('browserify', path.resolve(filepath));
         delete cached.caches.copyImg[path.resolve(filepath)];
@@ -127,4 +137,4 @@ gulp.task('watch', function() {
 })
 
 
-gulp.task('default', gulp.series('clean', gulp.parallel('copyHtml', 'styles', 'browserify', 'imagemin', 'copyFonts'), gulp.parallel('watch', 'serve')));
+gulp.task('default', gulp.series('clean', gulp.parallel('copyHtml', 'styles', 'browserify', 'imagemin', 'copyFonts', 'copyAdmin'), gulp.parallel('watch', 'serve')));

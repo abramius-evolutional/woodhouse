@@ -33,14 +33,14 @@ var Main = React.createClass({
                 <div className='service indentsMainsComponents'>
                     <Service />
                 </div>
+                <div className='orderBox indentsMainsComponents'>
+                    <FormOrder />
+                </div>
                 <div className='portfolio indentsMainsComponents'>
                     <Portfolio />
                 </div>
                 <div className='news indentsMainsComponents'>
                     <NewsBox />
-                </div>
-                <div className='orderBox indentsMainsComponents'>
-                    <FormOrder />
                 </div>
                 <div className='reviews indentsMainsComponents'>
                     <Reviews />

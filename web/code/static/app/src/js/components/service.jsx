@@ -27,22 +27,26 @@ var Service = React.createClass({
                         <g>
                             <image x="708px" y="100px" xlinkHref="/static/img/4.svg"/>
                         </g>
-                        <line x1="40" x2="260" y1="100" y2="100" stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <line x1={716} x2={701} y1={193} y2={207} stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <polygon points="703,202 707,205 701,207"  fill="black" />
                         <g>
                             <image x="608px" y="200px" xlinkHref="/static/img/5.svg"/>
                         </g>
-                        <line x1="40" x2="260" y1="100" y2="100" stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <line x1='501' x2='608' y1="250" y2="250" stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <polygon points="506,248 501,250 506,252"  fill="black" />
                         <g>
                             <image x="401px" y="200px" xlinkHref="/static/img/6.svg"/>
                         </g>
-                        <line x1="40" x2="260" y1="100" y2="100" stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <line x1='294' x2='401' y1='250' y2='250' stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <polygon points="299,248 294,250 299,252"  fill="black" />
                         <g>
                             <image x="194px" y="200px" xlinkHref="/static/img/7.svg"/>
                         </g>
-                        <line x1="40" x2="260" y1="100" y2="100" stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
                         <g>
                             <image x="94px" y="300px" xlinkHref="/static/img/8.svg"/>
                         </g>
+                        <line x1={202} x2={187} y1={293} y2={307} stroke="black" strokeWidth="1" strokeLinecap="round" strokeDasharray="1, 2"/>
+                        <polygon points="189,302 193,305 187,307"  fill="black" />
                     </svg>
                 </div>
             </div>

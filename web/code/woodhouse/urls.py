@@ -7,7 +7,7 @@ import request.urls
 import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/*', include(admin.site.urls)),
     url(r'^api/content/', include(content.urls)),
     url(r'^api/request/', include(request.urls)),
     url(r'', views.main),

@@ -13,7 +13,7 @@ __pycache__/
 web/code/media/
 
 # Node modules
-web/code/static/shop/node_modules
+#web/code/static/app/node_modules
 
 # DataBase
 db/data

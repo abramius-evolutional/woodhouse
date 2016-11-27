@@ -1,0 +1,40 @@
+.formHeader {
+  width: 100%;
+}
+.orderDiscription > div input[type="text"] {
+  width: 230px;
+  margin: 0px 15px;
+  background: none;
+  border: 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  outline: none;
+  transition: border-bottom 0.3s;
+  font-weight: lighter;
+    font-size: 15px;
+    color: #fff;
+}
+.orderDiscription > div input[type="text"]:focus {
+  border-bottom: 1px solid #fff;
+}
+.orderDiscription > div input[type="text"]:input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.formHeader > button {
+  width: 390px;
+  margin-top: 30px;
+  height: 55px;
+  border-radius: 55px;
+  background: rgba(0,0,0,0);
+  border: 1px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+      font-weight: lighter;
+  transition: background 0.4s, color 0.4s;
+  cursor: pointer;
+  outline: 0px;
+}
+.formHeader > button:hover {
+  background: #fff;
+  color: black;
+}

@@ -1,0 +1,154 @@
+.logo
+{
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+
+    background: url(/static/img/002.svg) no-repeat center;
+    background-size: 144px;
+}
+.headerBox
+{
+    width: 1170px;
+    margin: auto;
+}
+.logoBox
+{
+    float: left;
+
+    width: 336px;
+    height: 100px;
+}
+.logoBox > a
+{
+    display: inline-block;
+    float: left;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+.logoBox > a > h2
+{
+    margin: 0;
+}
+.logoBox > a > span
+{
+    font-weight: lighter;
+}
+.logoTitle
+{
+    margin-top: 26px;
+    margin-left: 20px;
+}
+.headerHeaderBox
+{
+    width: 100%;
+    height: 100px;
+}
+.headerMenu
+{
+    float: right;
+
+    width: 200px;
+    height: 100px;
+    padding-top: 26px;
+}
+.headerMenu > i
+{
+    float: right;
+
+    margin-right: 31px;
+
+    color: rgb(246,177,81);
+}
+.phoneBox
+{
+    float: left;
+
+    width: 116px;
+}
+.phoneBox > span
+{
+    display: inline-block;
+
+    width: 100%;
+
+    color: #fff;
+}
+.order
+{
+    font-size: 10px;
+
+    cursor: pointer;
+    text-align: right;
+    text-decoration: underline;;
+}
+.phone
+{
+    font-weight: bold;
+}
+.headerTitle
+{
+    line-height: 3px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #fff;
+}
+.headerTitle > h2
+{
+    display: inline-block;
+  font-size: 40px;
+    width: 100%;
+
+    text-transform: uppercase;
+}
+.headerTitle > p
+{
+    font-weight: lighter;
+        text-transform: uppercase;
+}
+.orderDiscription
+{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    font-weight: lighter;
+        margin-bottom: 28px;
+}
+.orderDiscription > div {
+      padding: 20px 184px;
+}
+@media screen and (max-width: 1170px) {
+    .headerBox
+    {
+        width: 900px;
+        margin: auto;
+    }
+    .orderDiscription > div {
+        padding: 20px 0px;
+    }
+    .orderDiscription {
+        width: 100%;
+        margin-top: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        font-weight: lighter;
+        margin-bottom: 28px;
+    }
+    .headerTitle > h2 {
+        display: inline-block;
+        font-size: 30px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+}

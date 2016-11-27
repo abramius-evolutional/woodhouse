@@ -1,0 +1,104 @@
+.orderBox  input[type="text"] {
+    width: 230px;
+    margin: 0px 15px;
+    background: none;
+    border: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    outline: none;
+    transition: border-bottom 0.3s;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #fff;
+}
+.orderBox  input[type="text"]:focus {
+    border-bottom: 1px solid #fff;
+}
+.orderBox > div > form > h3 {
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+.orderBox > div > form > button {
+    width: 251px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    height: 55px;
+    border-radius: 55px;
+    background: rgba(0,0,0,0);
+    border: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: lighter;
+    transition: background 0.4s, color 0.4s;
+    cursor: pointer;
+    outline: 0px;
+}
+.orderBox > div {
+    width: 1170px;
+    margin: auto;
+}
+.boxInput {
+    display: table;
+    margin: auto;
+}
+.textBox {
+
+}
+.textBox > span {
+    width: calc(100% - 206px);
+    display: inline-block;
+    color: #fff;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    padding-left: 206px;
+}
+.textBox > textarea {
+    margin-left: 205px;
+    margin-top: 14px;
+    background: none;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    width: 757px;
+    font-weight: lighter;
+    font-size: 15px;
+    outline: none;
+    transition: border-bottom 0.3s;
+}
+.textBox > textarea:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+@media screen and (max-width: 1170px) {
+    .orderBox > div {
+        width: 900px;
+        margin: auto;
+    }
+    .textBox > textarea {
+        margin-left: 73px;
+        margin-top: 14px;
+        background: none;
+        color: #fff;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        width: 757px;
+        font-weight: lighter;
+        font-size: 15px;
+        outline: none;
+        transition: border-bottom 0.3s;
+    }
+    .textBox > span {
+        width: calc(100% - 206px);
+        display: inline-block;
+        color: #fff;
+        margin-top: 40px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        padding-left: 73px;
+    }
+}

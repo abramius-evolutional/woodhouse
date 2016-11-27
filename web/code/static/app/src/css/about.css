@@ -1,0 +1,88 @@
+.aboutBox {
+  width: 1170px;
+  margin: auto;
+      margin-bottom: 360px;
+}
+.headerAbout {
+  width: 100%;
+height: 35px;
+}
+.headerAbout div {
+  height: 50%;
+  width: 81px;
+  float: left;
+  border-bottom: 1px solid;
+  margin-right: 20px;
+}
+.headerAbout h2 {
+  display: inline-block;
+text-transform: uppercase;
+float: left;
+  margin: 0;
+      font-size: 30px;
+}
+.infoBox {
+  width: 100%;
+    height: 115px;
+        margin-top: 50px;
+}
+.infoBoxItem {
+  height: 100%;
+    width: calc(100% / 3);
+    display: inline-block;
+        line-height: 34px;
+}
+.infoBoxItem span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.infoBoxItem span:nth-child(1) {
+  font-size: 31px;
+    font-weight: 700;
+    color: rgb(246,177,81);
+}
+.infoBoxItem span:nth-child(2) {
+  font-size: 24px;
+    font-weight: 100;
+    color: rgb(246,177,81);
+    text-transform: uppercase;
+}
+.infoBoxItem span:nth-child(3) {
+  font-size: 18px;
+    font-weight: 100;
+}
+.aboutContent {
+  width: 619px;
+margin-left: 200px;
+margin-top: 155px;
+    line-height: 25px;
+}
+.aboutContentTitlle {
+  display: inline-block;
+width: 100%;
+text-transform: uppercase;
+font-size: 21px;
+font-weight: 900;
+}
+.aboutContent > p {
+      font-weight: lighter;
+}
+.aboutContentName {
+  display: inline-block;
+width: 100%;
+font-weight: 700;
+}
+.aboutContentPost {
+  display: inline-block;
+width: 100%;
+color: rgb(155,155,155);
+font-weight: 100;
+}
+@media screen and (max-width: 1170px) {
+  .aboutBox {
+    width: 900px;
+    margin: auto;
+    margin-bottom: 360px;
+  }
+}

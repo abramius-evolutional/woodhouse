@@ -1,0 +1,114 @@
+.portfolioBox {
+    width: 1170px;
+    /*height: 500px;*/
+    margin: auto;
+}
+.portfolioBox > div {
+    width: 350px;
+    height: 500px;
+    display: inline-block;
+    margin: 0px 20px;
+    overflow: hidden;
+}
+.portfolioBox > div > div {
+    height: 233px;
+    overflow: hidden;
+}
+.portfolioBox > div > div > img {
+    /* height: 262px; */
+    margin: auto;
+    /* text-align: center; */
+    display: inline-block;
+    width: 100%;
+}
+.portfolioBox > div.portfolioTitle > span {
+    display: inline-block;
+    width: 100%;
+}
+.portfolioBox > div.portfolioTitle > span:nth-child(2) {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+.portfolioBox > div.portfolioTitle > span:nth-child(3) {
+    text-align: center;
+    font-size: 13px;
+    color: grey;
+}
+.portfolioBox > div.portfolioTitle {
+    width: 100%;
+    height: initial;
+    margin: 0px;
+    margin-bottom: 34px;
+}
+.portfolioBox > div > div.line, div.line {
+    height: 10px;
+    width: 141px;
+    margin: auto;
+    border-top: 1px solid;
+    display: block;
+}
+.portfolioBox > span {
+    display: inline-block;
+    width: 100%;
+}
+.portfolioBox > span:nth-child(6) {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+.portfolioBox > span:nth-child(7) {
+    text-align: center;
+    font-size: 13px;
+    color: grey;
+}
+.portfolioBox > button {
+    width: 390px;
+    margin-top: 30px;
+    height: 55px;
+    border-radius: 55px;
+    background: rgba(0,0,0,0);
+    border: 1px solid #000;
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: lighter;
+    transition: background 0.4s, color 0.4s;
+    cursor: pointer;
+    outline: 0px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+.portfolioBox > button:hover {
+    background: #000;
+    color: #fff;
+}
+@media screen and (max-width: 1170px) {
+    .portfolioBox {
+        width: 900px;
+        /* height: 500px; */
+        margin: auto;
+    }
+    .portfolioBox > div {
+        width: 260px;
+        height: 500px;
+        display: inline-block;
+        margin: 0px 20px;
+        overflow: hidden;
+    }
+    .portfolioBox > div > div {
+        height: 169px;
+        overflow: hidden;
+    }
+    .portfolioBox > div > div.line, div.line {
+        height: 10px;
+        width: 141px;
+        margin: auto;
+        border-top: 1px solid;
+        display: block;
+    }
+}

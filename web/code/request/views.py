@@ -15,7 +15,7 @@ def make_calculation_request(request):
 
     return ApiResponse({
         'status': 'saved',
-        'request_id': new_request.id
+        'calculation_request_id': new_request.id
     })
 
 @csrf_exempt
@@ -31,6 +31,6 @@ def make_design_request(request):
 
     return ApiResponse({
         'status': 'saved',
-        'request_id': new_request.id
+        'design_request_id': new_request.id
     })
 

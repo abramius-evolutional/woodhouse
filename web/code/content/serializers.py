@@ -17,7 +17,6 @@ class AboutCompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = models.AboutCompany
         fields = (
-            'id',
             'title',
             'name',
             'phone',

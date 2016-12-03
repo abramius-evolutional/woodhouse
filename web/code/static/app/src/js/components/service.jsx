@@ -6,7 +6,7 @@ var Service = React.createClass({
         return (
             <div className="serviceBox">
                 <div className="line"></div>
-                <span>Как мы будем строить ваш дом?</span>
+                <span>Услуги</span>
                 <div className="svgServiceBox">
                     <svg>
                         <g>

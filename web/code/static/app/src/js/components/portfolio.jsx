@@ -30,9 +30,6 @@ var Portfolio = React.createClass({
                     </div>
                     <div></div>
                 </div>
-                <div className="line"></div>
-                <span>Еще больше в нашей галереи</span>
-                <span>С описанием работ</span>
                 <button>Перейти в галерею</button>
             </div>
         );

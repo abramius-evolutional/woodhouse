@@ -16,10 +16,12 @@ height: 35px;
 }
 .headerAbout h2 {
   display: inline-block;
-text-transform: uppercase;
-float: left;
+  text-transform: uppercase;
+  float: left;
   margin: 0;
-      font-size: 30px;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
 }
 .infoBox {
   width: 100%;

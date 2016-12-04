@@ -1,5 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+var AppActions = require('../actions/actions.js')
 var HeaderComponent = require('./HeaderComponent.jsx');
 var About = require('./about.jsx');
 var Presentstion = require('./presentation.jsx');
@@ -8,10 +9,13 @@ var NewsBox = require('./newsBox.jsx');
 var FormOrder = require('./formOrder.jsx');
 var Reviews = require('./Reviews.jsx');
 var Footer = require('./footer.jsx');
-var Service = require('./service.jsx')
+var Service = require('./service.jsx');
+var Company = require('./company.jsx');
 
 var Main = React.createClass({
-
+    componentDidMount: function () {
+        AppActions.getData();
+    },
     render: function() {
         return (
             <div className='bodyBox'>
@@ -41,6 +45,9 @@ var Main = React.createClass({
                 </div>
                 <div className='news indentsMainsComponents'>
                     <NewsBox />
+                </div>
+                <div className="company">
+                    <Company/>
                 </div>
                 <div className='reviews indentsMainsComponents'>
                     <Reviews />

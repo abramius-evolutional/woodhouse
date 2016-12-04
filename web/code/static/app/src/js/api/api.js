@@ -3,24 +3,12 @@
 var $ = require('jquery');
 
 var Api = {
-	internalState: {
-		state: null,
-		floors: null,
-		headers: {},
-		idMall: null,
-		maxTime: null,
-		minTime: null, 
-		requestHeaders: null
-	},
-	constantUrl: {
-		mall: {
-			root: 'https://api-v2.getshopster.com/mall'
-		}
-		// mall: {
-		// 	root: 'https://api.getshopster.com/v1/mall?mall_id=',
-		// 	username: '&username=',
-		// 	password: '&password='
-		// }
+	urls: {
+		about: '/api/content/list/AboutCompany/',
+		workItem: '/api/content/list/WorkItem/',
+		news: '/api/content/list/News/',
+		comments: '/api/content/list/Comment/',
+        indicator: '/api/content/list/KeyIndicator/'
 	},
 	getRequest: function (id, url, success, error) {
 		var data;
@@ -38,20 +26,12 @@ var Api = {
 	        }.bind(this)
 		});
 	},
-	getRequestHeaders: function (state, url, success, error) {
-		// if (this.internalState.requestHeaders != null) {
-		// 		this.internalState.requestHeaders.abort();
-		// 		// this.internalState.requestHeaders = null;
-		// 	}
-		var data;
-		this.internalState.requestHeaders = $.ajax({
+	getRequestHeaders: function (params ,url, success, error) {
+		$.ajax({
 			url: url,
-			headers:  this.internalState.headers,
-			data: data,
+            type: 'GET',
 			success: function(data) {
-				this.internalState.minTime = state.min_timestamp;
-            	success(data);
-            	this.internalState.requestHeaders = null;
+            	success(params ,data);
 	        }.bind(this),
 	        error: function(xhr, status, err) {
 	            // error(err);
@@ -59,19 +39,12 @@ var Api = {
 	        }.bind(this)
 		});
 	},
-	getMallsList: function (state, success, error) {
-		this.internalState.idMall = state.selectedObjects;
-		this.internalState.maxTime = state.max_timestamp;
-		this.internalState.minTime = state.min_timestamp;
-		this.internalState.headers = state;
-		// this.internalState.headers['x-token'] = state.token;	
-		// this.internalState.headers['x-username'] = state.username;
-		var username = encodeURIComponent(state.username);
-		var password = encodeURIComponent(state.password);
-		var url = this.constantUrl.mall.root;
-		if (state['x-token'] !== undefined && state['x-username'] !== undefined) {
-			this.getRequestHeaders(state, url, success, error);
-		}
+	getData: function (success, error) {
+        this.getRequestHeaders('about', this.urls.about, success,error);
+        this.getRequestHeaders('comments', this.urls.comments, success,error);
+        this.getRequestHeaders('news', this.urls.news, success,error);
+        this.getRequestHeaders('work' ,this.urls.workItem, success,error);
+        this.getRequestHeaders('indicator' ,this.urls.indicator, success,error);
 	}
 };
 

@@ -3,8 +3,25 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var Form = require('./formHeader.jsx');
+var AppStore = require('../stores/store.js');
 var Header = React.createClass({
+    getInitialState: function () {
+        return {
+            about: AppStore.getState().about
+        };
+    },
+    componentDidMount: function () {
+        AppStore.addChangeStoreModuleListener(this.onChange)
+    },
+    componentWillUnmount: function () {
+        AppStore.removeChangeStoreModuleListener(this.onChange);
+    },
+    onChange: function () {
+        this.setState({
+            about: AppStore.getState().about
+        });
 
+    },
     render: function() {
         return (
             <div className='headerBox'>
@@ -18,7 +35,7 @@ var Header = React.createClass({
                     </div>
                     <div className='headerMenu'>
                         <div className='phoneBox'>
-                            <span className='phone'>8 950 990 90 90</span>
+                            <span className='phone'>{this.state.about.phone}</span>
                             <span className='order'>Заказать звонок</span>
                         </div>
                         <i className="fa fa-bars fa-2x" aria-hidden="true"></i>

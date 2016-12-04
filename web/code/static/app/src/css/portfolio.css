@@ -10,6 +10,11 @@
     margin: 0px 20px;
     overflow: hidden;
 }
+.portfolioBox > div.portfolioItem {
+    background: #222431;
+    color: #fff;
+    transition: background .5s, color .5s;
+}
 .portfolioBox > div > div {
     height: 233px;
     overflow: hidden;
@@ -82,10 +87,31 @@
     display: block;
     margin-top: 30px;
     margin-bottom: 24px;
+
+}
+.portfolioBox > div > div > h3 {
+    text-align: center;
+}
+.portfolioBox > div > div > p {
+    display: inline-block;
+    height: 140px;
+    overflow: auto;
+    color: #72758a;
+}
+.portfolioBox > div.portfolioItem:hover{
+    background: #fff;
+    color: #000;
 }
 .portfolioBox > button:hover {
     background: #000;
     color: #fff;
+}
+.portfolioBox > div > div.boxDiscription {
+    padding: 15px;
+    text-align: center;
+}
+.portfolioBox > div > div.boxDiscription > p {
+    color: ;
 }
 @media screen and (max-width: 1170px) {
     .portfolioBox {

@@ -2,9 +2,43 @@
 
 var React = require('react');
 var PropTypes = React.PropTypes;
+var AppStore = require('../stores/store.js');
 
 var Portfolio = React.createClass({
+    getInitialState: function () {
+        return {
+            works: AppStore.getState().works,
+            newWorks: AppStore.getState().newWorks
+        };
+    },
+    componentDidMount: function () {
+        AppStore.addChangeStoreModuleListener(this.onChange)
+    },
+    componentWillUnmount: function () {
+        AppStore.removeChangeStoreModuleListener(this.onChange);
+    },
+    onChange: function () {
+        this.setState({
+            works: AppStore.getState().works,
+            newWorks: AppStore.getState().newWorks
+        });
+
+    },
     render: function () {
+        var worksNode = this.state.newWorks.map(function (prop, id) {
+            return(
+                <div key={id} className="portfolioItem">
+                    <div>
+                        <img src={prop.url[0]} alt={prop.title}/>
+                    </div>
+                    <div className="boxDiscription">
+                        <h3>{prop.title}</h3>
+                        <p>{prop.description}</p>
+                    </div>
+                </div>
+            );
+        });
+
         return(
             <div className="portfolioBox">
                 <div className="portfolioTitle">
@@ -12,24 +46,7 @@ var Portfolio = React.createClass({
                     <span>Наши работы</span>
                     <span>Этапы строительства и итоги работы</span>
                 </div>
-                <div>
-                    <div>
-                        <img src="http://srub-penza.ru/_mod_files/ce_images/common/1306744335_0.jpg" alt=""/>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>
-                        <img src="http://marimagnat.ru/images/blog/sborka-krovli.jpg" alt=""/>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>
-                        <img src="http://stroika-smi.ru/images/stories/publications-zagorodstroy/srub-doma-bani.jpg" alt=""/>
-                    </div>
-                    <div></div>
-                </div>
+                {worksNode}
                 <button>Перейти в галерею</button>
             </div>
         );

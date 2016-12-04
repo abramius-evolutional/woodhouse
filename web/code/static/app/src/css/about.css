@@ -8,11 +8,11 @@
 height: 35px;
 }
 .headerAbout div {
-  height: 50%;
-  width: 81px;
-  float: left;
-  border-bottom: 1px solid;
-  margin-right: 20px;
+  height: 10px;
+  width: 141px;
+  margin: auto;
+  border-top: 1px solid;
+  display: block;
 }
 .headerAbout h2 {
   display: inline-block;
@@ -87,4 +87,12 @@ font-weight: 100;
     margin: auto;
     margin-bottom: 360px;
   }
+}
+.aboutBox button.aboutMore {
+    border-radius: 14px;
+    border: solid 1px #000;
+    background: #fff;
+    height: 17px;
+    outline: none;
+    cursor: pointer;
 }

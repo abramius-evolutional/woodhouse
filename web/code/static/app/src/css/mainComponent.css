@@ -77,3 +77,7 @@ body
     height: 642px;
     overflow: hidden;
 }
+.company {
+    padding: 30px 0;
+    border: 1px dashed;
+}

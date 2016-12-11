@@ -5,6 +5,7 @@ var PropTypes = React.PropTypes;
 
 var ReviewsItem = React.createClass({
     render: function () {
+        // console.log('rewItems', this.props.prop);
         var discription;
         if (this.props.prop.description.length <= 150) {
             discription = this.props.prop.description;
@@ -14,7 +15,7 @@ var ReviewsItem = React.createClass({
         }
         return(
             <li>
-                <img src="http://livedemo00.template-help.com/wordpress_49230/wp-content/uploads/2014/05/Depositphotos_11581353_EL4_03-170x179.jpg" />
+                <img src={this.props.prop.url} />
                 <div>
                     <h4>{this.props.prop.title}</h4>
                     <p>

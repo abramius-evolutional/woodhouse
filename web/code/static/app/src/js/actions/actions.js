@@ -29,6 +29,12 @@ var Action = {
                 console.error(err);
             }
         );
+    },
+    openModal: function (data) {
+        AppStores.openModal(data);
+    },
+    hideModal: function () {
+        AppStores.hideModal();
     }
 }
 

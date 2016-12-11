@@ -3,6 +3,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var AppStore = require('../stores/store.js');
+var AppActions = require('../actions/actions.js');
 
 var Portfolio = React.createClass({
     getInitialState: function () {
@@ -24,8 +25,20 @@ var Portfolio = React.createClass({
         });
 
     },
+    onClickWorks: function (e) {
+        AppActions.openModal({status: 'work', data: e});
+        // console.log('portfolio', e);
+    },
     render: function () {
+        var func = this.onClickWorks;
         var worksNode = this.state.newWorks.map(function (prop, id) {
+            var description = prop.description;
+            if (prop.description.length > 200) {
+                description = prop.description.substring(0, 200)
+            }
+            function onclickWork() {
+                func(prop);
+            }
             return(
                 <div key={id} className="portfolioItem">
                     <div>
@@ -33,7 +46,10 @@ var Portfolio = React.createClass({
                     </div>
                     <div className="boxDiscription">
                         <h3>{prop.title}</h3>
-                        <p>{prop.description}</p>
+                        <p>
+                            {description}
+                            <button onClick={onclickWork} type="button" className="aboutMore">...</button>
+                        </p>
                     </div>
                 </div>
             );

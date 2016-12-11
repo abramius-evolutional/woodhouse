@@ -12,7 +12,12 @@ var state = {
     news: [],
     newsTop: [],
     reviews: [],
-    reviewsTop: []
+    reviewsTop: [],
+    statusShowModal: false,
+    dataModal: {
+	    status: '',
+        data: {}
+    }
 }
 
 
@@ -108,6 +113,16 @@ var AppStore = assign({}, EventEmitter.prototype, {
             state.newsTop.splice(0, data.length - 3);
         }
         // console.log('store', data);
+        this.emitChangeToModuleListeners();
+    },
+    openModal: function (data) {
+        state.statusShowModal = true;
+        state.dataModal.status = data.status;
+        state.dataModal.data = data.data;
+        this.emitChangeToModuleListeners();
+    },
+    hideModal: function () {
+        state.statusShowModal = false;
         this.emitChangeToModuleListeners();
     },
 	getState: function() {

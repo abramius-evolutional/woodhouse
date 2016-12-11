@@ -78,5 +78,5 @@ class CommentSerializer(serializers.ModelSerializer):
     def get_workid(self, obj):
         return obj.work_item.id if obj.work_item else None
     def get_urls(self, obj):
-        return map(lambda im: im.image.url, obj.images.all())
+        return obj.image.url
 

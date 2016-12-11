@@ -88,7 +88,7 @@ class NewsImage(models.Model):
 class Comment(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок')
     description = models.TextField(default='', blank=True, verbose_name='Описание')
-    dt = models.DateTimeField(default=timezone.now, verbose_name='Дата новости')
+    dt = models.DateTimeField(default=timezone.now, verbose_name='Дата комментария')
     work_item = models.ForeignKey(WorkItem, blank=True, null=True, 
         related_name='comments', verbose_name='Связанная работа')
     class Meta:
@@ -96,7 +96,7 @@ class Comment(models.Model):
         verbose_name_plural = 'Отзывы'
 
 class CommentImage(models.Model):
-    comment = models.OneToOneField(Comment, related_name='images', verbose_name='Связанный отзыв')
+    comment = models.OneToOneField(Comment, related_name='image', verbose_name='Связанный отзыв')
     image = models.ImageField(upload_to='images_comments/', verbose_name='Изображение')
     def __unicode__(self):
         return self.image.url

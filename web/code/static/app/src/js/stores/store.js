@@ -81,7 +81,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
     },
 	getWork: function (data) {
         state.works = data;
-        if (data.length === 3) {
+        if (data.length <= 3) {
             state.newWorks = data;
         }
         else if (data.length > 3) {
@@ -94,7 +94,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 	getComments: function (data) {
         console.log('store', data);
         state.reviews = data;
-        if (data.length === 4) {
+        if (data.length <= 4) {
             state.reviewsTop = data;
         }
         else if (data.length > 4) {
@@ -105,7 +105,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
     },
 	getNews: function (data) {
 	    state.news = data;
-        if (data.length === 3) {
+        if (data.length <= 3) {
             state.newsTop = data;
         }
         else if (data.length > 3) {

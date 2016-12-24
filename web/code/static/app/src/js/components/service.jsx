@@ -22,7 +22,7 @@ var Service = React.createClass({
                         </div>
                     </div>
                     <div className="itemService">
-                        <div style={{background: 'url(/static/img/2.svg) no-repeat center'}}></div>
+                        <div style={{background: 'url(/static/img/4.svg) no-repeat center'}}></div>
                         <span>ОТБОР И ПОДГОТОВКА КАЧЕСТВЕННОГО ЛЕСА.</span>
                         <div className="infoBoxService">
                             <h3>ОТБОР И ПОДГОТОВКА КАЧЕСТВЕННОГО ЛЕСА.</h3>
@@ -50,7 +50,7 @@ var Service = React.createClass({
                         </div>
                     </div>
                     <div className="itemService">
-                        <div style={{background: 'url(/static/img/4.svg) no-repeat center'}}></div>
+                        <div style={{background: 'url(/static/img/6.svg) no-repeat center'}}></div>
                         <span>ТРАНСПОРТИРОВКА ДО МЕСТА НАЗНАЧЕНИЯ.</span>
                         <div className="infoBoxService">
                             <h3>ТРАНСПОРТИРОВКА ДО МЕСТА НАЗНАЧЕНИЯ.</h3>
@@ -61,7 +61,7 @@ var Service = React.createClass({
                         </div>
                     </div>
                     <div className="itemService">
-                        <div style={{background: 'url(/static/img/5.svg) no-repeat center'}}></div>
+                        <div style={{background: 'url(/static/img/7.svg) no-repeat center'}}></div>
                         <span>СБОРКА СРУБА / МОНТАЖ КОНСТРУКЦИИ НА ФУНДАМЕНТ.</span>
                         <div className="infoBoxService">
                             <h3>СБОРКА СРУБА / МОНТАЖ КОНСТРУКЦИИ НА ФУНДАМЕНТ.</h3>
@@ -72,7 +72,7 @@ var Service = React.createClass({
                         </div>
                     </div>
                     <div className="itemService">
-                        <div style={{background: 'url(/static/img/6.svg) no-repeat center'}}></div>
+                        <div style={{background: 'url(/static/img/8.svg) no-repeat center'}}></div>
                         <span>МОНТАЖ КРЫШИ.</span>
                         <div className="infoBoxService">
                             <h3>МОНТАЖ КРЫШИ.</h3>
@@ -83,7 +83,7 @@ var Service = React.createClass({
                         </div>
                     </div>
                     <div className="itemService">
-                        <div style={{background: 'url(/static/img/7.svg) no-repeat center'}}></div>
+                        <div style={{background: 'url(/static/img/2.svg) no-repeat center'}}></div>
                         <span>ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ.</span>
                         <div className="infoBoxService">
                             <h3>ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ.</h3>
@@ -97,7 +97,7 @@ var Service = React.createClass({
                         </div>
                     </div>
                     <div className="itemService">
-                        <div style={{background: 'url(/static/img/8.svg) no-repeat center'}}></div>
+                        <div style={{background: 'url(/static/img/5.svg) no-repeat center'}}></div>
                         <span>ГАРАНТИИ И ДАЛЬНЕЙШЕЕ ОБСЛУЖИВАНИЕ.</span>
                         <div className="infoBoxService">
                             <h3>ГАРАНТИИ И ДАЛЬНЕЙШЕЕ ОБСЛУЖИВАНИЕ.</h3>

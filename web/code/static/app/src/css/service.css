@@ -47,20 +47,22 @@ div.infoBoxService {
     bottom: 0px;
     right: 0px;
     top: 0px;
-    width: 200px;
+    width: 211px;
     text-align: left;
     background: rgb(227,227,227);
-    padding: 5px;
+    padding: 20px;
     box-shadow: -5px 0px 27px rgb(227,227,227);
     opacity: 0;
     pointer-events: none;
     transition: opacity .3s;
+    /* text-align: center; */
 }
 div.infoBoxService > h3 {
 text-align: left;
 }
 div.infoBoxService > ul{
     font-size: 12px;
+    padding-left: 16px;
 }
 div.infoBoxService li{
 

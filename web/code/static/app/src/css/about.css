@@ -2,6 +2,7 @@
   width: 1170px;
   margin: auto;
       margin-bottom: 360px;
+    position: relative;
 }
 .headerAbout {
   width: 100%;
@@ -55,9 +56,9 @@ height: 35px;
     font-weight: 100;
 }
 .aboutContent {
-  width: 619px;
-margin-left: 200px;
-margin-top: 155px;
+    width: 500px;
+    margin-left: 362px;
+    margin-top: 155px;
     line-height: 25px;
 }
 .aboutContentTitlle {
@@ -99,11 +100,22 @@ font-weight: 100;
     cursor: pointer;
     color: #fff;
 }
+.companyImage {
+    position: absolute;
+    width: 328px;
+    /* height: 200px; */
+    top: 261px;
+    left: 0px;
+}
+.companyImage > img {
+    width: 100%;
+}
 @media screen and (max-width: 1170px) {
   .aboutBox {
     width: 900px;
     margin: auto;
     margin-bottom: 360px;
+      position: relative;
   }
 }
 

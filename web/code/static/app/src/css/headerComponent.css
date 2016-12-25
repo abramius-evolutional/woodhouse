@@ -54,6 +54,7 @@
     width: 200px;
     height: 100px;
     padding-top: 26px;
+    position: relative;
 }
 .headerMenu > i
 {
@@ -62,6 +63,7 @@
     margin-right: 31px;
 
     color: rgb(246,177,81);
+    cursor: pointer;
 }
 .phoneBox
 {
@@ -125,6 +127,40 @@
 }
 .orderDiscription > div {
       padding: 20px 184px;
+}
+.headerMenu > i:hover > .boxListForums {
+    opacity: 1;
+    height: 125px;
+}
+.boxListForums {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: opacity .4s, height .4s;
+    top: 59px;
+    left: 1px;
+    background: rgba(0,0,0,.5);
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid rgba(0,0,0,.4);
+}
+.boxListForums > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.boxListForums > ul > li {
+    border: 1px solid rgba(0,0,0,.4);
+    border-bottom: none;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.boxListForums > ul > li:hover {
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,.4);
 }
 @media screen and (max-width: 1170px) {
     .headerBox

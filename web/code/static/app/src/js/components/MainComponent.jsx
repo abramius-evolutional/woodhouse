@@ -43,7 +43,7 @@ var Main = React.createClass({
                         <HeaderComponent/>
                         <div id="trailer" className="is_overlay">
                             <video id="video" width="100%" height="auto" autoPlay="autoplay" loop="loop" preload="auto">
-                                <source src="/static/img/banner.mp4"></source>
+                                <source src="/static/img/banner.mp4" type="video/mp4"></source>
                                 {/*<source src="book.webm" type="video/webm"></source>*/}
                             </video>
                         </div>

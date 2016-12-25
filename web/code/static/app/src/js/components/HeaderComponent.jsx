@@ -36,9 +36,18 @@ var Header = React.createClass({
                     <div className='headerMenu'>
                         <div className='phoneBox'>
                             <span className='phone'>{this.state.about.phone}</span>
-                            <span className='order'>Заказать звонок</span>
+                            {/*<span className='order'>Заказать звонок</span>*/}
                         </div>
-                        <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
+                        <i className="fa fa-bars fa-2x" aria-hidden="true">
+                            <div className="boxListForums">
+                                <ul>
+                                    <li>О нас</li>
+                                    <li>Наши работы</li>
+                                    <li>Новости</li>
+                                    <li style={{borderBottom: '1px solid rgba(0,0,0,.4)'}}>Отзывы</li>
+                                </ul>
+                            </div>
+                        </i>
                     </div>
                 </div>
                 <div className='headerTitle'>

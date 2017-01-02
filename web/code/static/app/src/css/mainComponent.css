@@ -24,6 +24,7 @@ body
     /*border: 1px dashed;*/
     /*background: url(/img/background.jpg) no-repeat bottom;*/
     background-size: 100%;
+    background: rgba(0,0,0,.5);
     /*height: 725px;*/
 }
 .about

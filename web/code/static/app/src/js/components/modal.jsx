@@ -11,7 +11,7 @@ var Modal = React.createClass({
         return {
             statusShowModal: AppStore.getState().statusShowModal,
             dataModal: AppStore.getState().dataModal,
-            slideInterval: 2000
+            slideInterval: 4000
         };
     },
     componentDidUpdate: function (prevProps, prevState, prevContext) {

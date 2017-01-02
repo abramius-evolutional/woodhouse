@@ -23,6 +23,7 @@ height: 35px;
   font-size: 30px;
   width: 100%;
   text-align: center;
+    line-height: 40px;
 }
 .infoBox {
   width: 100%;
@@ -58,7 +59,7 @@ height: 35px;
 .aboutContent {
     width: 500px;
     margin-left: 362px;
-    margin-top: 155px;
+    margin-top: 114px;
     line-height: 25px;
 }
 .aboutContentTitlle {
@@ -104,7 +105,7 @@ font-weight: 100;
     position: absolute;
     width: 328px;
     /* height: 200px; */
-    top: 261px;
+    top: 157px;
     left: 0px;
 }
 .companyImage > img {

@@ -4,6 +4,9 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var AppStore = require('../stores/store.js');
 var AppActions = require('../actions/actions.js');
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+var Link = require('react-router').Link;
 
 var Portfolio = React.createClass({
     getInitialState: function () {
@@ -63,7 +66,9 @@ var Portfolio = React.createClass({
                     <span>Этапы строительства и итоги работы</span>
                 </div>
                 {worksNode}
-                <button>Перейти в галерею</button>
+                <Link to={'works'}>
+                    <button>Перейти в галерею</button>
+                </Link>
             </div>
         );
     }

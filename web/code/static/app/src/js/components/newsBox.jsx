@@ -1,6 +1,9 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var AppStore = require('../stores/store.js');
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+var Link = require('react-router').Link;
 
 var NewsBox = React.createClass({
     getInitialState: function () {
@@ -49,33 +52,9 @@ var NewsBox = React.createClass({
                 <span>Новости</span>
                 <span>Наши проекты</span>
                 {newsNode}
-                {/*<div className="newsBoxItem">*/}
-                    {/*<div><img src="http://etotdom-39.cdn.pjtsu.com/wp-content/uploads/2014/07/Foto-3-%E2%80%93-Stroitelstvo-sruba.jpg" alt=""/></div>*/}
-                    {/*<div>*/}
-                        {/*<h3>“Wallflower”</h3>*/}
-                        {/*<p>Wallflower debuted at number two on the Canadian Albums Chart, selling 13,000 copies in its first week. In the United States, it entered the Billboard 200 at number ten with first-week sales of 44,000 copies, becoming Krall's. Wallflower debuted at number two on the Canadian Albums Chart, selling 13,000 copies in its first week. In the United States, it entered the Billboard 200 at number ten with first-week sales of 44,000 copies, becoming Krall's</p>*/}
-                        {/*<div className="lineNews"></div>*/}
-                        {/*<a href="">Подробнее...</a>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-                {/*<div className="newsBoxItem">*/}
-                    {/*<div><img src="http://marimagnat.ru/images/blog/sborka-krovli.jpg" alt=""/></div>*/}
-                    {/*<div>*/}
-                        {/*<h3>“Wallflower”</h3>*/}
-                        {/*<p>Wallflower debuted at number two on the Canadian Albums Chart, selling 13,000 copies in its first week. In the United States, it entered the Billboard 200 at number ten with first-week sales of 44,000 copies, becoming Krall's. Wallflower debuted at number two on the Canadian Albums Chart, selling 13,000 copies in its first week. In the United States, it entered the Billboard 200 at number ten with first-week sales of 44,000 copies, becoming Krall's</p>*/}
-                        {/*<div className="lineNews"></div>*/}
-                        {/*<a href="">Подробнее...</a>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-                {/*<div className="newsBoxItem">*/}
-                    {/*<div><img src="http://cs317322.vk.me/v317322312/3c81/1qR-KtTNubU.jpg" alt=""/></div>*/}
-                    {/*<div>*/}
-                        {/*<h3>“Wallflower”</h3>*/}
-                        {/*<p>Wallflower debuted at number two on the Canadian Albums Chart, selling 13,000 copies in its first week. In the United States, it entered the Billboard 200 at number ten with first-week sales of 44,000 copies, becoming Krall's. Wallflower debuted at number two on the Canadian Albums Chart, selling 13,000 copies in its first week. In the United States, it entered the Billboard 200 at number ten with first-week sales of 44,000 copies, becoming Krall's</p>*/}
-                        {/*<div className="lineNews"></div>*/}
-                        {/*<a href="">Подробнее...</a>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
+                <Link to={'news'}>
+                    <button>Больше...</button>
+                </Link>
             </div>
         );
     }

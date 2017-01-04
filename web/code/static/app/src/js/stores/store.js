@@ -18,7 +18,8 @@ var state = {
 	    status: '',
         data: {}
     },
-    statusLoadCalc: 'false'
+    statusLoadCalc: 'false',
+    route: '/'
 }
 
 
@@ -128,6 +129,10 @@ var AppStore = assign({}, EventEmitter.prototype, {
     },
     onLoadStatusCalc: function (e) {
         statusLoadCalc: e;
+        this.emitChangeToModuleListeners();
+    },
+    updateRoute: function (data) {
+	    state.route = data;
         this.emitChangeToModuleListeners();
     },
 	getState: function() {

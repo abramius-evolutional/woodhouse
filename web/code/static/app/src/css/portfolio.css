@@ -69,7 +69,7 @@
     font-size: 13px;
     color: grey;
 }
-.portfolioBox > button {
+.portfolioBox > a > button {
     width: 390px;
     margin-top: 30px;
     height: 55px;
@@ -85,8 +85,16 @@
     outline: 0px;
     margin: auto;
     display: block;
+    /*margin-top: 30px;*/
+    /*margin-bottom: 24px;*/
+
+}
+.portfolioBox > a {
+    display: block;
+    margin: auto;
     margin-top: 30px;
     margin-bottom: 24px;
+    text-decoration: none;
 
 }
 .portfolioBox > div > div > h3 {
@@ -102,7 +110,7 @@
     background: #fff;
     color: #000;
 }
-.portfolioBox > button:hover {
+.portfolioBox > a > button:hover {
     background: #000;
     color: #fff;
 }

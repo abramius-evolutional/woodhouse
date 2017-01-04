@@ -59,6 +59,9 @@ var Action = {
                 alert('Не удалось отправить заявку повторите еще раз');
             }
         );
+    },
+    updateRoute: function (data) {
+        AppStores.updateRoute(data);
     }
 }
 

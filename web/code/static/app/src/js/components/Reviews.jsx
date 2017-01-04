@@ -4,6 +4,9 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var ReviewsItem = require('./reviewsItem.jsx');
 var AppStore = require('../stores/store.js');
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+var Link = require('react-router').Link;
 
 var Reviews = React.createClass({
     getInitialState: function () {
@@ -39,6 +42,9 @@ var Reviews = React.createClass({
                 <ul className="reviewsList">
                     {reviewsNode}
                 </ul>
+                <Link to={'reviews'}>
+                    <button>Все отзывы</button>
+                </Link>
             </div>
         );
     }

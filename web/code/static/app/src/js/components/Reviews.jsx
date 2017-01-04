@@ -26,7 +26,7 @@ var Reviews = React.createClass({
 
     },
     render: function () {
-        console.log('!!!!!!',this.state.reviewsTop);
+        // console.log('!!!!!!',this.state.reviewsTop);
         var reviewsNode = this.state.reviewsTop.map(function (prop, id) {
             return(
                 <ReviewsItem prop={prop} key={id}/>

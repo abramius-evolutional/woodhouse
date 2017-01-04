@@ -35,6 +35,17 @@ var Action = {
     },
     hideModal: function () {
         AppStores.hideModal();
+    },
+    onSubmitCalculation: function (e) {
+        Api.onSubmitCalculation(e,
+            function (data) {
+                console.log('actions', data);
+
+            },
+            function (err) {
+                console.error(err);
+            }
+        );
     }
 }
 

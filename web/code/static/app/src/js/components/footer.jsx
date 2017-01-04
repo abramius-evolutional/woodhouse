@@ -3,16 +3,35 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var ReviewsItem = require('./reviewsItem.jsx');
+var AppStore = require('../stores/store.js');
 
 var Footer = React.createClass({
+    getInitialState: function () {
+        return {
+            about: AppStore.getState().about
+        };
+    },
+    componentDidMount: function () {
+        AppStore.addChangeStoreModuleListener(this.onChange)
+    },
+    componentWillUnmount: function () {
+        AppStore.removeChangeStoreModuleListener(this.onChange);
+    },
+    onChange: function () {
+        this.setState({
+            about: AppStore.getState().about
+        });
+
+    },
     render: function () {
+        // console.log('footer', this.state.about.address);
         return(
             <div className="footerBox">
                 <h4>Наши контакты</h4>
                 <div className="contacts">
                     <div>
                         <i className="fa fa-phone" ></i>
-                        <span style={{fontWeight: 600}}>+7 999 999 99 99</span>
+                        <span style={{fontWeight: 600}}>{this.state.about.phone}</span>
                     </div>
                     <div>
                         <i className="fa fa-envelope-o" ></i>
@@ -21,7 +40,7 @@ var Footer = React.createClass({
                 </div>
                 <div className="adress">
                     <span>Адрес производства</span>
-                    <p>Красноясркий край, Курагинский район, д. Петропавловка, строительная площадка "Позин проект"</p>
+                    <p>{this.state.about.address}</p>
                 </div>
                 <div className="iconBox">
                     <div className='logoBox footerText'>

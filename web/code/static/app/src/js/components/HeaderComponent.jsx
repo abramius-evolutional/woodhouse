@@ -44,6 +44,7 @@ var Header = React.createClass({
                                     <li>О нас</li>
                                     <li>Наши работы</li>
                                     <li>Новости</li>
+                                    <li>Видео</li>
                                     <li style={{borderBottom: '1px solid rgba(0,0,0,.4)'}}>Отзывы</li>
                                 </ul>
                             </div>

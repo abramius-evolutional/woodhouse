@@ -45,7 +45,7 @@ var Modal = React.createClass({
         console.log('Image loaded ', event.target)
     },
     render: function () {
-        console.log('modal', this.state.dataModal);
+        // console.log('modal', this.state.dataModal);
         if (this.state.statusShowModal === false) {
             return null;
         }

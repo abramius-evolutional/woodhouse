@@ -46,6 +46,9 @@ var Api = {
 	},
     onSubmitCalculation: function (state, success, error) {
 		this.getRequest('/api/request/make_calculation_request/', state, success, error)
+    },
+    onSubmitMake: function (state, success, error) {
+        this.getRequest('/api/request/make_design_request/', state, success, error)
     }
 };
 

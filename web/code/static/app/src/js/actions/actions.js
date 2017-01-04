@@ -44,6 +44,19 @@ var Action = {
             },
             function (err) {
                 console.error(err);
+                alert('Не удалось отправить заявку повторите еще раз');
+            }
+        );
+    },
+    onSubmitMake: function (e) {
+        Api.onSubmitMake(e,
+            function (data) {
+                console.log('actions', data);
+
+            },
+            function (err) {
+                console.error(err);
+                alert('Не удалось отправить заявку повторите еще раз');
             }
         );
     }

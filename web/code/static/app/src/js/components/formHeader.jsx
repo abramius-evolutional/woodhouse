@@ -62,14 +62,19 @@ var Form = React.createClass({
         };
         if (this.state.valueName !== '' && this.state.valuePhone !== '' && this.state.valueEmail !== '') {
             AppActions.onSubmitCalculation(data);
+            this.setState({
+                valueName: '',
+                valuePhone: '',
+                valueEmail: ''
+            });
         }
     },
     render: function() {
         return (
             <form className='formHeader'>
-                <input style={{borderBottomColor: this.state.borderName}} onChange={this.onChangeName} placeholder='Введите имя' type='text'/>
-                <input style={{borderBottomColor: this.state.borderPhone}} onChange={this.onChangePhone} placeholder='Введите телефон' type='text'/>
-                <input style={{borderBottomColor: this.state.borderEmail}} onChange={this.onChangeEmail} placeholder='Введите e-mail' type='text'/>
+                <input value={this.state.valueName} style={{borderBottomColor: this.state.borderName}} onChange={this.onChangeName} placeholder='Введите имя' type='text'/>
+                <input value={this.state.valuePhone} style={{borderBottomColor: this.state.borderPhone}} onChange={this.onChangePhone} placeholder='Введите телефон' type='text'/>
+                <input value={this.state.valueEmail} style={{borderBottomColor: this.state.borderEmail}} onChange={this.onChangeEmail} placeholder='Введите e-mail' type='text'/>
                 <button onClick={this.onSubmitCalculation} type="button">Отправить заявку на расчет</button>
             </form>
         );

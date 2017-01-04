@@ -17,7 +17,8 @@ var state = {
     dataModal: {
 	    status: '',
         data: {}
-    }
+    },
+    statusLoadCalc: 'false'
 }
 
 
@@ -123,6 +124,10 @@ var AppStore = assign({}, EventEmitter.prototype, {
     },
     hideModal: function () {
         state.statusShowModal = false;
+        this.emitChangeToModuleListeners();
+    },
+    onLoadStatusCalc: function (e) {
+        statusLoadCalc: e;
         this.emitChangeToModuleListeners();
     },
 	getState: function() {

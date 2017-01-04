@@ -18,7 +18,8 @@ var Main = React.createClass({
     getInitialState: function () {
         return {
             statusShowModal: AppStore.getState().statusShowModal,
-            dataModal: AppStore.getState().dataModal
+            dataModal: AppStore.getState().dataModal,
+            router: AppStore.getState().route
         };
     },
     componentWillUnmount: function () {
@@ -27,7 +28,8 @@ var Main = React.createClass({
     onChange: function () {
         this.setState({
             statusShowModal: AppStore.getState().statusShowModal,
-            dataModal: AppStore.getState().dataModal
+            dataModal: AppStore.getState().dataModal,
+            router: AppStore.getState().route
         });
 
     },
@@ -36,49 +38,116 @@ var Main = React.createClass({
         AppStore.addChangeStoreModuleListener(this.onChange)
     },
     render: function() {
-        return (
-            <div>
-                <div className='bodyBox' >
-                    <div className='header indentsMainsComponents'>
-                        <HeaderComponent/>
-                        <div id="trailer" className="is_overlay">
-                            <video id="video" width="100%" height="auto" autoPlay="autoplay" loop="loop" preload="auto">
-                                <source src="/static/img/banner.mp4" type="video/mp4"></source>
-                                {/*<source src="book.webm" type="video/webm"></source>*/}
-                            </video>
+        // console.log('main', this.props);
+        if (this.state.router === '/') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents'>
+                            <HeaderComponent/>
+                            <div id="trailer" className="is_overlay">
+                                <video id="video" width="100%" height="auto" autoPlay="autoplay" loop="loop" preload="auto">
+                                    <source src="/static/img/banner.mp4" type="video/mp4"></source>
+                                    {/*<source src="book.webm" type="video/webm"></source>*/}
+                                </video>
+                            </div>
                         </div>
+                        <div className='about indentsMainsComponents'>
+                            <About/>
+                        </div>
+                        <div className='presentationBox'>
+                            <Presentstion />
+                        </div>
+                        <div className='service indentsMainsComponents'>
+                            <Service />
+                        </div>
+                        <div className='orderBox indentsMainsComponents'>
+                            <FormOrder />
+                        </div>
+                        <div className='portfolio indentsMainsComponents'>
+                            <Portfolio />
+                        </div>
+                        <div className='news indentsMainsComponents'>
+                            <NewsBox />
+                        </div>
+                        <div className="company">
+                            <Company/>
+                        </div>
+                        <div className='reviews indentsMainsComponents'>
+                            <Reviews />
+                        </div>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
                     </div>
-                    <div className='about indentsMainsComponents'>
-                        <About/>
-                    </div>
-                    <div className='presentationBox'>
-                        <Presentstion />
-                    </div>
-                    <div className='service indentsMainsComponents'>
-                        <Service />
-                    </div>
-                    <div className='orderBox indentsMainsComponents'>
-                        <FormOrder />
-                    </div>
-                    <div className='portfolio indentsMainsComponents'>
-                        <Portfolio />
-                    </div>
-                    <div className='news indentsMainsComponents'>
-                        <NewsBox />
-                    </div>
-                    <div className="company">
-                        <Company/>
-                    </div>
-                    <div className='reviews indentsMainsComponents'>
-                        <Reviews />
-                    </div>
-                    <footer className='footer indentsMainsComponents'>
-                        <Footer/>
-                    </footer>
+                    <Modal/>
                 </div>
-                <Modal/>
-            </div>
-        );
+            );
+        }
+        else if (this.state.router === 'about') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents'>
+                            <HeaderComponent/>
+
+                        </div>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
+        else if (this.state.router === 'news') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents'>
+                            <HeaderComponent/>
+
+                        </div>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
+        else if (this.state.router === 'reviews') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents'>
+                            <HeaderComponent/>
+
+                        </div>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
+        else if (this.state.router === 'works') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents'>
+                            <HeaderComponent/>
+
+                        </div>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
     }
 
 });

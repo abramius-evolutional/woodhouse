@@ -22,6 +22,7 @@ class AboutCompany(models.Model):
     address = models.TextField(blank=True, default='', verbose_name='Адрес')
     about = models.TextField(blank=True, default='', verbose_name='О компании')
     position = models.CharField(max_length=200, blank=True, default='', verbose_name='Должность')
+    email = models.CharField(max_length=30, blank=True, default='', verbose_name='Email')
     class Meta:
         verbose_name = 'Контактная информация'
         verbose_name_plural = 'Контактная информация'

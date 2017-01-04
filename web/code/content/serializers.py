@@ -23,6 +23,7 @@ class AboutCompanySerializer(serializers.ModelSerializer):
             'address',
             'about',
             'position',
+            'email',
         )
 
 class WorkItemSerializer(serializers.ModelSerializer):

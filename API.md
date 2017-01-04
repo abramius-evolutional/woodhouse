@@ -35,7 +35,8 @@ Response
             "phone": "78394839489384", 
             "address": "adress", 
             "about": "about", 
-            "position": "position"
+            "position": "position",
+            "email": "",
         },
         ...
     ]

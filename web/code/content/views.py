@@ -2,7 +2,7 @@ from apitools import ApiResponse
 import models
 import serializers
 
-MODEL_NAMES = ('KeyIndicator', 'AboutCompany', 'WorkItem', 'News', 'Comment')
+MODEL_NAMES = ('KeyIndicator', 'AboutCompany', 'WorkItem', 'News', 'Comment', 'Video')
 
 def content_provider(request, model_name):
     

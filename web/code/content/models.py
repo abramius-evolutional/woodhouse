@@ -64,6 +64,7 @@ class News(models.Model):
     title = models.CharField(max_length=200, verbose_name='Название')
     description = models.TextField(default='', blank=True, verbose_name='Описание')
     dt = models.DateTimeField(default=timezone.now, verbose_name='Дата новости')
+    video_url = models.CharField(max_length=200, default='', blank=True, verbose_name='Ссылка на видео')
     def __unicode__(self):
         return self.title
     class Meta:
@@ -109,3 +110,14 @@ class CommentImage(models.Model):
         )
     image_tag.short_description = 'Предпросмотр'
     image_tag.allow_tags = True
+
+class Video(models.Model):
+    title = models.CharField(max_length=200, verbose_name='Название')
+    description = models.TextField(default='', blank=True, verbose_name='Описание')
+    dt = models.DateTimeField(default=timezone.now, verbose_name='Дата добавления')
+    video_url = models.CharField(max_length=200, verbose_name='Ссылка на видео')
+    def __unicode__(self):
+        return self.title
+    class Meta:
+        verbose_name = 'Видео'
+        verbose_name_plural = 'Видео'

@@ -53,6 +53,7 @@ class NewsSerializer(serializers.ModelSerializer):
             'description',
             'dt',
             'url',
+            'video_url',
         )
     def get_urls(self, obj):
         return map(lambda im: im.image.url, obj.images.all())
@@ -80,3 +81,16 @@ class CommentSerializer(serializers.ModelSerializer):
     def get_urls(self, obj):
         return obj.image.image.url
 
+class VideoSerializer(serializers.ModelSerializer):
+    dt = serializers.SerializerMethodField('get_datetime')
+    class Meta:
+        model = models.News
+        fields = (
+            'id',
+            'title',
+            'description',
+            'dt',
+            'video_url',
+        )
+    def get_datetime(self, obj):
+        return obj.dt.strftime('%Y-%m-%d %H:%M')

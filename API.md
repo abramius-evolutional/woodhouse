@@ -131,3 +131,20 @@ Response
     }
 
 --
+
+#### GET /api/content/list/Video/
+
+Response
+
+    [
+        {
+            "id": 1, 
+            "title": "\u0412\u0438\u0434\u0435\u043e 1", 
+            "description": "", 
+            "dt": "2017-01-04 13:13", 
+            "video_url": "http://youtube.com/blablabla/"
+        },
+        ...
+    ]
+
+--

@@ -36,7 +36,7 @@ class NewsAdmin(admin.ModelAdmin):
     inlines = [
         NewsImageInline,
     ]
-    list_display = ('title', 'description', 'dt')
+    list_display = ('title', 'description', 'dt', 'video_url')
     def get_queryset(self, request):
         qs = super(NewsAdmin, self).get_queryset(request)
         return qs.order_by('dt')
@@ -54,11 +54,18 @@ class CommentAdmin(admin.ModelAdmin):
         qs = super(CommentAdmin, self).get_queryset(request)
         return qs.order_by('dt')
 
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'dt', 'video_url')
+    def get_queryset(self, request):
+        qs = super(VideoAdmin, self).get_queryset(request)
+        return qs.order_by('dt')
+
 admin.site.register(models.WorkItem, WorkItemAdmin)
 admin.site.register(models.AboutCompany, AboutCompanyAdmin)
 admin.site.register(models.WorkItemCategory)
 admin.site.register(models.KeyIndicator, KeyIndicatorAdmin)
 admin.site.register(models.News, NewsAdmin)
 admin.site.register(models.Comment, CommentAdmin)
+admin.site.register(models.Video, VideoAdmin)
 
 admin.site.unregister(Group)

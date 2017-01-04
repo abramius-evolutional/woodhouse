@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.contrib import admin
 from django.contrib.auth.models import Group
 import models
@@ -69,3 +70,5 @@ admin.site.register(models.Comment, CommentAdmin)
 admin.site.register(models.Video, VideoAdmin)
 
 admin.site.unregister(Group)
+
+admin.site.site_header = 'pozinproject.ru'

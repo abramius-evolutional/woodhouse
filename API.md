@@ -73,7 +73,8 @@ Response
             "dt": "2016-11-27 03:25", 
             "url": [
                 "/media/images_news/O1kmKqw8Cvc.jpg"
-            ]
+            ],
+            video_url: "http://..."
         },
         ...
     ]

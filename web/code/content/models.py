@@ -27,6 +27,21 @@ class AboutCompany(models.Model):
         verbose_name = 'Контактная информация'
         verbose_name_plural = 'Контактная информация'
 
+class AboutCompanyImage(models.Model):
+    about_company = models.ForeignKey(AboutCompany, related_name='images', verbose_name='Информация')
+    image = models.ImageField(upload_to='images_about/', verbose_name='Изображение')
+    def __unicode__(self):
+        return self.image.url
+    class Meta:
+        verbose_name = 'Изображение компании'
+        verbose_name_plural = 'Изображения компании'
+    def image_tag(self):
+        return u'<a href="%s"><img src="%s" style="max-height: 150px; max-width: 300px" /></a>' % (
+            self.image.url, self.image.url
+        )
+    image_tag.short_description = 'Предпросмотр'
+    image_tag.allow_tags = True
+
 class WorkItemCategory(models.Model):
     name = models.CharField(max_length=60, verbose_name='Категория')
     def __unicode__(self):

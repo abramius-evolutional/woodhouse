@@ -23,7 +23,14 @@ class WorkImageAdmin(admin.ModelAdmin):
 class KeyIndicatorAdmin(admin.ModelAdmin):
     list_display = ('number', 'label', 'description')
 
+class AboutCompanyImageInline(admin.StackedInline):
+    readonly_fields = ('image_tag',)
+    model = models.AboutCompanyImage
+
 class AboutCompanyAdmin(admin.ModelAdmin):
+    inlines = [
+        AboutCompanyImageInline,
+    ]
     list_display = ('title', 'name', 'phone')
     def has_add_permission(self, request):
         return False if self.model.objects.count() > 0 else \

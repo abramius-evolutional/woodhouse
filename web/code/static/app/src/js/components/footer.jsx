@@ -24,7 +24,7 @@ var Footer = React.createClass({
 
     },
     render: function () {
-        // console.log('footer', this.state.about.address);
+        // console.log('footer', this.state.about.email);
         return(
             <div className="footerBox">
                 <h4>Наши контакты</h4>
@@ -35,7 +35,7 @@ var Footer = React.createClass({
                     </div>
                     <div>
                         <i className="fa fa-envelope-o" ></i>
-                        <span>kirdro@yandex.ru</span>
+                        <span>{this.state.about.email}</span>
                     </div>
                 </div>
                 <div className="adress">

@@ -37,6 +37,9 @@ Response
             "about": "about", 
             "position": "position",
             "email": "",
+            "url": [
+                "/media/images_about/img1.jpg"
+            ], 
         },
         ...
     ]

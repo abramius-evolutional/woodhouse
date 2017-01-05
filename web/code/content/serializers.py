@@ -14,6 +14,7 @@ class KeyIndicatorSerializer(serializers.ModelSerializer):
         )
 
 class AboutCompanySerializer(serializers.ModelSerializer):
+    url = serializers.SerializerMethodField('get_urls')
     class Meta:
         model = models.AboutCompany
         fields = (
@@ -24,7 +25,10 @@ class AboutCompanySerializer(serializers.ModelSerializer):
             'about',
             'position',
             'email',
+            'url',
         )
+    def get_urls(self, obj):
+        return map(lambda im: im.image.url, obj.images.all())
 
 class WorkItemSerializer(serializers.ModelSerializer):
     url = serializers.SerializerMethodField('get_urls')

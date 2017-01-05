@@ -117,6 +117,8 @@
 .portfolioBox > div > div.boxDiscription {
     padding: 15px;
     text-align: center;
+    position: relative;
+
 }
 .portfolioBox > div > div.boxDiscription > p {
     color: rgb(114, 117, 138);
@@ -143,6 +145,17 @@
     color: #fff;
     margin-left: 5px;
 }
+/*.portfolioBox > div > div.boxDiscription:before {*/
+    /*position: absolute;*/
+    /*content: "";*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*border-style: solid;*/
+    /*border-width: 74px 175px 0px 175px;*/
+    /*border-color: #ffffff transparent transparent transparent;*/
+/*}*/
 @media screen and (max-width: 1170px) {
     .portfolioBox {
         width: 900px;

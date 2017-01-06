@@ -18,6 +18,7 @@ var Company = require('./company.jsx');
 var Modal = require('./modal.jsx');
 var HeaderaDetails = require('./headeraDetails.jsx');
 var AboutDetails = require('./aboutDetails.jsx');
+var NewsDetails = require('./newsDetail.jsx');
 
 var Main = React.createClass({
     getInitialState: function () {
@@ -113,6 +114,7 @@ var Main = React.createClass({
                             <HeaderaDetails/>
 
                         </div>
+                        <NewsDetails/>
                         <footer className='footer indentsMainsComponents'>
                             <Footer/>
                         </footer>

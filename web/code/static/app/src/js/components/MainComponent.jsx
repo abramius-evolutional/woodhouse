@@ -2,6 +2,9 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var AppActions = require('../actions/actions.js');
 var AppStore = require('../stores/store.js');
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+var Link = require('react-router').Link;
 var HeaderComponent = require('./HeaderComponent.jsx');
 var About = require('./about.jsx');
 var Presentstion = require('./presentation.jsx');
@@ -13,6 +16,8 @@ var Footer = require('./footer.jsx');
 var Service = require('./service.jsx');
 var Company = require('./company.jsx');
 var Modal = require('./modal.jsx');
+var HeaderaDetails = require('./headeraDetails.jsx');
+var AboutDetails = require('./aboutDetails.jsx');
 
 var Main = React.createClass({
     getInitialState: function () {
@@ -88,10 +93,10 @@ var Main = React.createClass({
             return (
                 <div>
                     <div className='bodyBox' >
-                        <div className='header indentsMainsComponents'>
-                            <HeaderComponent/>
-
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
                         </div>
+                    <AboutDetails/>
                         <footer className='footer indentsMainsComponents'>
                             <Footer/>
                         </footer>
@@ -104,8 +109,8 @@ var Main = React.createClass({
             return (
                 <div>
                     <div className='bodyBox' >
-                        <div className='header indentsMainsComponents'>
-                            <HeaderComponent/>
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
 
                         </div>
                         <footer className='footer indentsMainsComponents'>
@@ -120,8 +125,8 @@ var Main = React.createClass({
             return (
                 <div>
                     <div className='bodyBox' >
-                        <div className='header indentsMainsComponents'>
-                            <HeaderComponent/>
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
 
                         </div>
                         <footer className='footer indentsMainsComponents'>
@@ -136,8 +141,8 @@ var Main = React.createClass({
             return (
                 <div>
                     <div className='bodyBox' >
-                        <div className='header indentsMainsComponents'>
-                            <HeaderComponent/>
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
 
                         </div>
                         <footer className='footer indentsMainsComponents'>

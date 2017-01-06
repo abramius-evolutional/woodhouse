@@ -26,7 +26,7 @@ var NewsDetail = React.createClass({
 
     },
     render: function () {
-        console.log('news', this.state.news);
+        // console.log('news', this.state.news);
         var listNode = null;
         if (this.state.news.length > 0) {
             listNode = this.state.news.map(function (prop, id) {

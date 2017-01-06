@@ -20,3 +20,9 @@
     border-bottom: 1px solid #ededed;
     margin: 0px;
 }
+.reviewsDetailsBody {
+    padding-bottom: 0px;
+}
+.reviewsDetailsBody > .titleBoxDetailNews {
+    padding: 0px 0px;
+}

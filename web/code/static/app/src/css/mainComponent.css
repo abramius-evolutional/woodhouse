@@ -90,7 +90,7 @@ body
 }
 .company {
     padding: 30px 0;
-    border: 1px dashed;
+    /*border: 1px dashed;*/
 }
 .modalBackground {
     position: fixed;

@@ -61,7 +61,7 @@ var Header = React.createClass({
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link>
+                                        <Link to={'video'}>
                                             Видео
                                         </Link>
                                     </li>

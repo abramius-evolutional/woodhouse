@@ -19,7 +19,9 @@ var state = {
         data: {}
     },
     statusLoadCalc: 'false',
-    route: '/'
+    route: '/',
+    video: [],
+    videoTop: []
 }
 
 
@@ -115,6 +117,17 @@ var AppStore = assign({}, EventEmitter.prototype, {
             state.newsTop.splice(0, data.length - 3);
         }
         // console.log('store', data);
+        this.emitChangeToModuleListeners();
+    },
+    getVideo: function (data) {
+        state.video = data;
+        if (data.length <= 3) {
+            state.videoTop = data;
+        }
+        else if (data.length > 3) {
+            state.videoTop = data;
+            state.videoTop.splice(0, data.length - 3);
+        }
         this.emitChangeToModuleListeners();
     },
     openModal: function (data) {

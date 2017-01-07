@@ -1,3 +1,64 @@
 .boxCompany {
     width: 1170px;
+    margin: auto;
+}
+.boxCompany > span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    /* color: white; */
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+.itemVideoBox {
+    width: 386px;
+    display: inline-block;
+    float: left;
+    padding: 2px;
+    height: 335px;
+}
+.headerVideo {
+    height: 217px;
+    width: 100%;
+}
+.discriptionBoxVideo {
+    padding-top: 1px;
+
+}
+.discriptionBoxVideo > h3 {
+    font-weight: 100;
+}
+.discriptionBoxVideo > p {
+    font-size: 12px;
+    color: #87b1bd;
+}
+.boxCompany > a {
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+.boxCompany > a > button {
+    width: 330px;
+    margin-top: 30px;
+    height: 55px;
+    border-radius: 55px;
+    background: rgba(0,0,0,0);
+    border: 1px solid #000;
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: lighter;
+    transition: background 0.4s, color 0.4s;
+    cursor: pointer;
+    outline: 0px;
+    margin: auto;
+    display: block;
+}
+.boxCompany > a > button:hover {
+    background: #000;
+    color: #fff;
 }

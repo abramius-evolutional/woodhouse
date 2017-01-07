@@ -89,5 +89,6 @@ ReactDOM.render(
         <Route path="about" component={App}/>
         <Route path="news" component={App}/>
         <Route path="reviews" component={App}/>
+        <Route path="video" component={App}/>
         <Route path="works" component={App}/>
     </Router>, document.getElementById('ReactBox'));

@@ -157,6 +157,22 @@ var Main = React.createClass({
                 </div>
             );
         }
+        else if (this.state.router === 'video') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
+
+                        </div>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
     }
 
 });

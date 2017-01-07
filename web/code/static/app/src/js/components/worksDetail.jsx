@@ -3,6 +3,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var AppStore = require('../stores/store.js');
+var AppActions = require('../actions/actions.js');
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var Link = require('react-router').Link;
@@ -32,6 +33,7 @@ var WorksDetail = React.createClass({
         // console.log('portfolio', e);
     },
     render: function () {
+        var func = this.onClickWorks;
         var worksNode = this.state.works.map(function (prop, id) {
             var description = prop.description;
             if (prop.description.length > 200) {

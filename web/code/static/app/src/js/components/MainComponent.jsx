@@ -20,7 +20,8 @@ var HeaderaDetails = require('./headeraDetails.jsx');
 var AboutDetails = require('./aboutDetails.jsx');
 var NewsDetails = require('./newsDetail.jsx');
 var ReviewsDetails = require('./reviewsDetails.jsx');
-var WorksDetail = require('./worksDetail.jsx')
+var WorksDetail = require('./worksDetail.jsx');
+var VideoDetail = require('./videoDetail.jsx');
 
 var Main = React.createClass({
     getInitialState: function () {
@@ -166,6 +167,9 @@ var Main = React.createClass({
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
+                        </div>
+                        <div className="company">
+                            <VideoDetail/>
                         </div>
                         <footer className='footer indentsMainsComponents'>
                             <Footer/>

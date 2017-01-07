@@ -106,7 +106,7 @@ body
     overflow: auto;
 }
 .modalBox {
-    width: 900px;
+    width: 90%;
     /* height: 300px; */
     background: #fff;
     margin: auto;
@@ -118,6 +118,7 @@ body
 }
 .boxImage {
     width: 900px;
+    float: left;
 }
 .modalBox > div > h1 {
     font-size: 30px;
@@ -128,6 +129,7 @@ body
 .modalBox > div > p {
     color: #777777;
     font-size: 14px;
+    margin-top: 0px;
 }
 .headerModal {
     /* height: 66px; */
@@ -139,7 +141,11 @@ body
 }
 .footerModal {
     padding-top: 10px;
-    border-top: 1px solid rgb(227,227,227);
+    /* border-top: 1px solid rgb(227,227,227); */
+    width: calc(100% - 921px);
+    float: left;
+    padding: 10px;
+    padding-top: 0px;
 }
 .hideModal {
     /* float: right; */

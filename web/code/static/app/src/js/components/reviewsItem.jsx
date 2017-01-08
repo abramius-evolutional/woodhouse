@@ -19,7 +19,10 @@ var ReviewsItem = React.createClass({
         }
         return(
             <li>
-                <img src={this.props.prop.url} />
+                <div className="revImageBox">
+                    <div className="inlineComponent"></div>
+                    <img src={this.props.prop.url} />
+                </div>
                 <div>
                     <h4>{this.props.prop.title}</h4>
                     <p>

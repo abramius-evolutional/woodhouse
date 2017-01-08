@@ -23,6 +23,7 @@ var ReviewsDetails = require('./reviewsDetails.jsx');
 var WorksDetail = require('./worksDetail.jsx');
 var VideoDetail = require('./videoDetail.jsx');
 var NewsItemDetail = require('./newsItemDetail.jsx');
+var WorkItemDetails = require('./workItemDetails.jsx');
 
 var Main = React.createClass({
     getInitialState: function () {
@@ -94,7 +95,7 @@ var Main = React.createClass({
                 </div>
             );
         }
-        else if (this.state.router === 'about') {
+        else if (this.state.router === '/about') {
             return (
                 <div>
                     <div className='bodyBox' >
@@ -110,7 +111,7 @@ var Main = React.createClass({
                 </div>
             );
         }
-        else if (this.state.router === 'news') {
+        else if (this.state.router === '/news') {
             return (
                 <div>
                     <div className='bodyBox' >
@@ -144,7 +145,7 @@ var Main = React.createClass({
                 </div>
             );
         }
-        else if (this.state.router === 'reviews') {
+        else if (this.state.router === '/reviews') {
             return (
                 <div>
                     <div className='bodyBox' >
@@ -161,7 +162,7 @@ var Main = React.createClass({
                 </div>
             );
         }
-        else if (this.state.router === 'works') {
+        else if (this.state.router === '/works') {
             return (
                 <div>
                     <div className='bodyBox' >
@@ -178,7 +179,24 @@ var Main = React.createClass({
                 </div>
             );
         }
-        else if (this.state.router === 'video') {
+        else if (this.state.router === '/works/:workId') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
+
+                        </div>
+                        <WorkItemDetails/>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
+        else if (this.state.router === '/video') {
             return (
                 <div>
                     <div className='bodyBox' >

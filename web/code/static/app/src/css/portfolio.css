@@ -123,7 +123,7 @@
 .portfolioBox > div > div.boxDiscription > p {
     color: rgb(114, 117, 138);
 }
-.boxDiscription > p > button.aboutMore {
+.boxDiscription > p > a > button.aboutMore {
     border-radius: 14px;
     border: solid 1px rgb(114, 117, 138);
     background: rgba(0,0,0,0);
@@ -134,7 +134,7 @@
     color: rgb(114, 117, 138);
     margin-left: 5px;
 }
-.boxDiscription > p > button.aboutMore:hover {
+.boxDiscription > p > a > button.aboutMore:hover {
     border-radius: 14px;
     border: solid 1px rgb(114, 117, 138);
     background: rgb(114, 117, 138);

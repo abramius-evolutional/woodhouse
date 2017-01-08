@@ -23,19 +23,26 @@ var App = React.createClass({
         statusLocation: '/'
     },
     componentDidUpdate: function(prevProps, prevState) {
-        if (this.props.routes[1] !== undefined) {
-            console.log('main', this.props.routes, this.props.routes[1].path, document.location.pathname.split('/')[2]);
-            this.internalState.statusLocation = this.props.routes[1].path;
+        console.log('main', this.props.routes);
+        if (this.props.routes[2] !== undefined) {
+            // console.log('main', this.props.routes, this.props.routes[2].path, document.location.pathname.split('/')[2]);
+            this.internalState.statusLocation = this.props.routes[2].path;
             var dataParams = {
-                pathPouter: this.props.routes[1].path,
+                pathPouter: this.props.routes[2].path,
                 routerId: +document.location.pathname.split('/')[2]
             };
             AppActions.getRouterParams(dataParams);
-            AppActions.updateRoute(this.props.routes[1].path);
+            AppActions.updateRoute(this.props.routes[2].path);
         }
-        else if (this.props.routes[1] === undefined) {
-            this.internalState.statusLocation = this.props.routes[0].path;
-            AppActions.updateRoute(this.props.routes[0].path);
+        else if (this.props.routes[2] === undefined) {
+            if (this.props.routes[1] === undefined) {
+                this.internalState.statusLocation = this.props.routes[0].path;
+                AppActions.updateRoute(this.props.routes[0].path);
+            }
+            else if (this.props.routes[1] !== undefined) {
+                this.internalState.statusLocation = this.props.routes[1].path;
+                AppActions.updateRoute(this.props.routes[1].path);
+            }
         }
         // console.log('main', this.internalState.statusLocation);
         // if (jsonLocation !== document.location.href) {
@@ -72,20 +79,26 @@ var App = React.createClass({
         // }
     },
     componentDidMount: function () {
-        // console.log('main', this.props.routes);
-        if (this.props.routes[1] !== undefined) {
-            console.log('main', this.props.routes, this.props.routes[1].path, document.location.pathname.split('/')[2]);
-            this.internalState.statusLocation = this.props.routes[1].path;
+        console.log('main', this.props.routes);
+        if (this.props.routes[2] !== undefined) {
+            console.log('main', this.props.routes, this.props.routes[2].path, document.location.pathname.split('/')[2]);
+            this.internalState.statusLocation = this.props.routes[2].path;
             var dataParams = {
-                pathPouter: this.props.routes[1].path,
+                pathPouter: this.props.routes[2].path,
                 routerId: +document.location.pathname.split('/')[2]
             };
             AppActions.getRouterParams(dataParams);
-            AppActions.updateRoute(this.props.routes[1].path);
+            AppActions.updateRoute(this.props.routes[2].path);
         }
-        else if (this.props.routes[1] === undefined) {
-            this.internalState.statusLocation = this.props.routes[0].path;
-            AppActions.updateRoute(this.props.routes[0].path);
+        else if (this.props.routes[2] === undefined) {
+            if (this.props.routes[1] === undefined) {
+                this.internalState.statusLocation = this.props.routes[0].path;
+                AppActions.updateRoute(this.props.routes[0].path);
+            }
+            else if (this.props.routes[1] !== undefined) {
+                this.internalState.statusLocation = this.props.routes[1].path;
+                AppActions.updateRoute(this.props.routes[1].path);
+            }
         }
         // console.log('main', this.internalState.statusLocation);
     },
@@ -108,12 +121,15 @@ module.exports = App;
 
 ReactDOM.render(
     <Router history={browserHistory}>
-        <Route path="/" component={App}/>
-        <Route path="about" component={App}/>
-        <Route path="news" component={App}>
-            <Route path="/news/:newsId" component={App}/>
+        <Route path="/" component={App}>
+            <Route path="/about" component={App}/>
+            <Route path="/news" component={App}>
+                <Route path="/news/:newsId" component={App}/>
+            </Route>
+            <Route path="/reviews" component={App}/>
+            <Route path="/video" component={App}/>
+            <Route path="/works" component={App}>
+                <Route path="/works/:workId" component={App}/>
+            </Route>
         </Route>
-        <Route path="reviews" component={App}/>
-        <Route path="video" component={App}/>
-        <Route path="works" component={App}/>
     </Router>, document.getElementById('ReactBox'));

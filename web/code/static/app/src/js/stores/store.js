@@ -95,6 +95,13 @@ var AppStore = assign({}, EventEmitter.prototype, {
                 }
 	        }
         }
+        else if(data.pathPouter === '/works/:workId') {
+            for (var i = 0; i < state.works.length; i++) {
+                if (state.works[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.works[i];
+                }
+            }
+        }
         this.emitChangeToModuleListeners();
     },
 	getWork: function (data) {
@@ -105,6 +112,13 @@ var AppStore = assign({}, EventEmitter.prototype, {
         else if (data.length > 3) {
             state.newWorks = data;
             state.newWorks.splice(0, data.length - 3);
+        }
+        if(state.route === '/works/:workId') {
+            for (var i = 0; i < state.works.length; i++) {
+                if (state.works[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.works[i];
+                }
+            }
         }
         // console.log('store>>>', state.newWorks);
         this.emitChangeToModuleListeners();

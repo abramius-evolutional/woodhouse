@@ -45,27 +45,27 @@ var HeaderaDetails = React.createClass({
                                 <div className="boxListForums">
                                     <ul>
                                         <li>
-                                            <Link to={'about'}>
+                                            <Link to={'/about'}>
                                                 О нас
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={'works'}>
+                                            <Link to={'/works'}>
                                                 Наши работы
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={'news'}>
+                                            <Link to={'/news'}>
                                                 Новости
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={'video'}>
+                                            <Link to={'/video'}>
                                                 Видео
                                             </Link>
                                         </li>
                                         <li style={{borderBottom: '1px solid rgba(0,0,0,.4)'}}>
-                                            <Link to={'reviews'}>
+                                            <Link to={'/reviews'}>
                                                 Отзывы
                                             </Link>
                                         </li>

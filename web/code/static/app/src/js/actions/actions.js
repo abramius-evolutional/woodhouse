@@ -65,6 +65,9 @@ var Action = {
     },
     updateRoute: function (data) {
         AppStores.updateRoute(data);
+    },
+    getRouterParams: function (data) {
+        AppStores.getRouterParams(data);
     }
 }
 

@@ -30,7 +30,7 @@ var Company = React.createClass({
         var videoNode = null;
         if (this.state.videoTop.length > 0) {
             videoNode = this.state.videoTop.map(function (prop, id) {
-                console.log('video', prop.description.length);
+                // console.log('video', prop.description.length);
                 var discription = null;
                 if (prop.description.length <= 200) {
                     discription = prop.description;

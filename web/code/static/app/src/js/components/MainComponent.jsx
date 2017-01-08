@@ -22,6 +22,7 @@ var NewsDetails = require('./newsDetail.jsx');
 var ReviewsDetails = require('./reviewsDetails.jsx');
 var WorksDetail = require('./worksDetail.jsx');
 var VideoDetail = require('./videoDetail.jsx');
+var NewsItemDetail = require('./newsItemDetail.jsx');
 
 var Main = React.createClass({
     getInitialState: function () {
@@ -47,7 +48,7 @@ var Main = React.createClass({
         AppStore.addChangeStoreModuleListener(this.onChange)
     },
     render: function() {
-        // console.log('main', this.props);
+        // console.log('main', this.state.router);
         if (this.state.router === '/') {
             return (
                 <div>
@@ -118,6 +119,23 @@ var Main = React.createClass({
 
                         </div>
                         <NewsDetails/>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
+        else if (this.state.router === '/news/:newsId') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
+
+                        </div>
+                        <NewsItemDetail/>
                         <footer className='footer indentsMainsComponents'>
                             <Footer/>
                         </footer>

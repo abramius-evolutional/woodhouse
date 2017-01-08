@@ -23,9 +23,20 @@ var App = React.createClass({
         statusLocation: '/'
     },
     componentDidUpdate: function(prevProps, prevState) {
-        // console.log('main', this.props.routes[0]);
-        this.internalState.statusLocation = this.props.routes[0].path;
-        AppActions.updateRoute(this.props.routes[0].path);
+        if (this.props.routes[1] !== undefined) {
+            console.log('main', this.props.routes, this.props.routes[1].path, document.location.pathname.split('/')[2]);
+            this.internalState.statusLocation = this.props.routes[1].path;
+            var dataParams = {
+                pathPouter: this.props.routes[1].path,
+                routerId: +document.location.pathname.split('/')[2]
+            };
+            AppActions.getRouterParams(dataParams);
+            AppActions.updateRoute(this.props.routes[1].path);
+        }
+        else if (this.props.routes[1] === undefined) {
+            this.internalState.statusLocation = this.props.routes[0].path;
+            AppActions.updateRoute(this.props.routes[0].path);
+        }
         // console.log('main', this.internalState.statusLocation);
         // if (jsonLocation !== document.location.href) {
         //     jsonLocation = document.location.href;
@@ -61,9 +72,21 @@ var App = React.createClass({
         // }
     },
     componentDidMount: function () {
-        // console.log('main', this.props.routes[0]);
-        this.internalState.statusLocation = this.props.routes[0].path;
-        AppActions.updateRoute(this.props.routes[0].path);
+        // console.log('main', this.props.routes);
+        if (this.props.routes[1] !== undefined) {
+            console.log('main', this.props.routes, this.props.routes[1].path, document.location.pathname.split('/')[2]);
+            this.internalState.statusLocation = this.props.routes[1].path;
+            var dataParams = {
+                pathPouter: this.props.routes[1].path,
+                routerId: +document.location.pathname.split('/')[2]
+            };
+            AppActions.getRouterParams(dataParams);
+            AppActions.updateRoute(this.props.routes[1].path);
+        }
+        else if (this.props.routes[1] === undefined) {
+            this.internalState.statusLocation = this.props.routes[0].path;
+            AppActions.updateRoute(this.props.routes[0].path);
+        }
         // console.log('main', this.internalState.statusLocation);
     },
 
@@ -87,7 +110,9 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App}/>
         <Route path="about" component={App}/>
-        <Route path="news" component={App}/>
+        <Route path="news" component={App}>
+            <Route path="/news/:newsId" component={App}/>
+        </Route>
         <Route path="reviews" component={App}/>
         <Route path="video" component={App}/>
         <Route path="works" component={App}/>

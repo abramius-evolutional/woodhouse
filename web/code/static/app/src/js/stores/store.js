@@ -102,6 +102,13 @@ var AppStore = assign({}, EventEmitter.prototype, {
                 }
             }
         }
+        else if(data.pathPouter === '/reviews/:rewId') {
+            for (var i = 0; i < state.reviews.length; i++) {
+                if (state.reviews[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.reviews[i];
+                }
+            }
+        }
         this.emitChangeToModuleListeners();
     },
 	getWork: function (data) {
@@ -132,6 +139,13 @@ var AppStore = assign({}, EventEmitter.prototype, {
         else if (data.length > 4) {
             state.reviewsTop = data;
             state.reviewsTop.splice(0, data.length - 4);
+        }
+        if(state.route === '/reviews/:rewId') {
+            for (var i = 0; i < state.reviews.length; i++) {
+                if (state.reviews[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.reviews[i];
+                }
+            }
         }
         this.emitChangeToModuleListeners();
     },

@@ -126,7 +126,9 @@ ReactDOM.render(
             <Route path="/news" component={App}>
                 <Route path="/news/:newsId" component={App}/>
             </Route>
-            <Route path="/reviews" component={App}/>
+            <Route path="/reviews" component={App}>
+                <Route path="/reviews/:rewId" component={App}/>
+            </Route>
             <Route path="/video" component={App}/>
             <Route path="/works" component={App}>
                 <Route path="/works/:workId" component={App}/>

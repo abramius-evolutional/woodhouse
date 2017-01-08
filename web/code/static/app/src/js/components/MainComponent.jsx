@@ -24,6 +24,7 @@ var WorksDetail = require('./worksDetail.jsx');
 var VideoDetail = require('./videoDetail.jsx');
 var NewsItemDetail = require('./newsItemDetail.jsx');
 var WorkItemDetails = require('./workItemDetails.jsx');
+var RevItemDetail = require('./revItemDetail.jsx');
 
 var Main = React.createClass({
     getInitialState: function () {
@@ -154,6 +155,23 @@ var Main = React.createClass({
 
                         </div>
                         <ReviewsDetails/>
+                        <footer className='footer indentsMainsComponents'>
+                            <Footer/>
+                        </footer>
+                    </div>
+                    <Modal/>
+                </div>
+            );
+        }
+        else if (this.state.router === '/reviews/:rewId') {
+            return (
+                <div>
+                    <div className='bodyBox' >
+                        <div className='header indentsMainsComponents backgroundHeader'>
+                            <HeaderaDetails/>
+
+                        </div>
+                        <RevItemDetail/>
                         <footer className='footer indentsMainsComponents'>
                             <Footer/>
                         </footer>

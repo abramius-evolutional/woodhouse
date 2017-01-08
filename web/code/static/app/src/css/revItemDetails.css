@@ -1,0 +1,30 @@
+.contentCommetnsItemDetails {
+    padding-bottom: 45px;
+}
+.boxImageComments {
+    width: 50%;
+    /* height: 20px; */
+    display: inline-block;
+    float: left;
+}
+.boxImageComments > img {
+    width: 93%;
+    /* padding: 14px; */
+    margin-top: 14px;
+}
+.boxTextComments {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+.boxTextComments > span {
+    display: inline-block;
+    width: 100%;
+    /* margin-top: 10px; */
+    border-bottom: 1px solid #ededed;
+    padding: 14px 0px;
+    color: rgb(210,210,210);
+}
+.boxTextComments > p {
+
+}

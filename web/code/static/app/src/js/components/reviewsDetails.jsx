@@ -44,7 +44,7 @@ var ReviewsDetails = React.createClass({
                             <p>
                                 {discription}
                             </p>
-                            <a href="#">подробнее...</a>
+                            <Link to={`/reviews/${prop.id}`}>подробнее...</Link>
                         </div>
                     </li>
                 );

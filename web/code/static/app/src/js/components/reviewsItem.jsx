@@ -2,6 +2,10 @@
 
 var React = require('react');
 var PropTypes = React.PropTypes;
+var AppStore = require('../stores/store.js');
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+var Link = require('react-router').Link;
 
 var ReviewsItem = React.createClass({
     render: function () {
@@ -21,7 +25,7 @@ var ReviewsItem = React.createClass({
                     <p>
                         {discription}
                     </p>
-                    <a href="#">подробнее...</a>
+                    <Link to={`/reviews/${this.props.prop.id}`}>подробнее...</Link>
                 </div>
             </li>
         );

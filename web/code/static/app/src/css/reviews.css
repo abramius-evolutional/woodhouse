@@ -32,6 +32,29 @@
     width: 170px;
     float: left;
 }
+.reviewsList > li > div.revImageBox {
+    width: 170px;
+    float: left;
+    background: rgba(0,0,0,.4);
+    position: relative;
+    overflow: hidden;
+}
+.reviewsList > li > div.revImageBox > div.inlineComponent {
+    height: 100%;
+    width: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.revImageBox > img {
+    /* width: 170px; */
+    /* float: left; */
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+}
 .reviewsList > li > div {
     width: calc(100% - 170px);
     display: inline-block;

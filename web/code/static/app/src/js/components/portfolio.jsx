@@ -51,7 +51,9 @@ var Portfolio = React.createClass({
                         <h3>{prop.title}</h3>
                         <p>
                             {description}
-                            <button onClick={onclickWork} type="button" className="aboutMore">...</button>
+                            <Link to={`/works/${prop.id}`}>
+                                <button type="button" className="aboutMore">...</button>
+                            </Link>
                         </p>
                     </div>
                 </div>
@@ -75,3 +77,11 @@ var Portfolio = React.createClass({
 });
 
 module.exports = Portfolio;
+
+
+
+
+
+
+
+

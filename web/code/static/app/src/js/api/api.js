@@ -8,7 +8,8 @@ var Api = {
 		workItem: '/api/content/list/WorkItem/',
 		news: '/api/content/list/News/',
 		comments: '/api/content/list/Comment/',
-        indicator: '/api/content/list/KeyIndicator/'
+        indicator: '/api/content/list/KeyIndicator/',
+		video: '/api/content/list/Video/'
 	},
 	getRequest: function (url, data, success, error) {
 		$.ajax({
@@ -43,6 +44,7 @@ var Api = {
         this.getRequestHeaders('news', this.urls.news, success,error);
         this.getRequestHeaders('work' ,this.urls.workItem, success,error);
         this.getRequestHeaders('indicator' ,this.urls.indicator, success,error);
+        this.getRequestHeaders('video' ,this.urls.video, success,error);
 	},
     onSubmitCalculation: function (state, success, error) {
 		this.getRequest('/api/request/make_calculation_request/', state, success, error)

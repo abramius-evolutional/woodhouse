@@ -19,7 +19,11 @@ var state = {
         data: {}
     },
     statusLoadCalc: 'false',
-    route: '/'
+    route: '/',
+    video: [],
+    videoTop: [],
+    routerParamsId: 0,
+    dataParamItems: {}
 }
 
 
@@ -81,6 +85,32 @@ var AppStore = assign({}, EventEmitter.prototype, {
     getIndicator: function (data) {
         this.emitChangeToModuleListeners();
     },
+    getRouterParams: function (data) {
+	    state.routerParamsId = data.routerId;
+	    if (data.pathPouter === '/news/:newsId') {
+            // console.log('store>>>>', state.news);
+	        for (var i = 0; i < state.news.length; i++) {
+	            if (state.news[i].id === state.routerParamsId) {
+	                state.dataParamItems = state.news[i];
+                }
+	        }
+        }
+        else if(data.pathPouter === '/works/:workId') {
+            for (var i = 0; i < state.works.length; i++) {
+                if (state.works[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.works[i];
+                }
+            }
+        }
+        else if(data.pathPouter === '/reviews/:rewId') {
+            for (var i = 0; i < state.reviews.length; i++) {
+                if (state.reviews[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.reviews[i];
+                }
+            }
+        }
+        this.emitChangeToModuleListeners();
+    },
 	getWork: function (data) {
         state.works = data;
         if (data.length <= 3) {
@@ -90,11 +120,18 @@ var AppStore = assign({}, EventEmitter.prototype, {
             state.newWorks = data;
             state.newWorks.splice(0, data.length - 3);
         }
+        if(state.route === '/works/:workId') {
+            for (var i = 0; i < state.works.length; i++) {
+                if (state.works[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.works[i];
+                }
+            }
+        }
         // console.log('store>>>', state.newWorks);
         this.emitChangeToModuleListeners();
     },
 	getComments: function (data) {
-        console.log('store', data);
+        // console.log('store', data);
         state.reviews = data;
         if (data.length <= 4) {
             state.reviewsTop = data;
@@ -102,6 +139,13 @@ var AppStore = assign({}, EventEmitter.prototype, {
         else if (data.length > 4) {
             state.reviewsTop = data;
             state.reviewsTop.splice(0, data.length - 4);
+        }
+        if(state.route === '/reviews/:rewId') {
+            for (var i = 0; i < state.reviews.length; i++) {
+                if (state.reviews[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.reviews[i];
+                }
+            }
         }
         this.emitChangeToModuleListeners();
     },
@@ -114,7 +158,27 @@ var AppStore = assign({}, EventEmitter.prototype, {
             state.newsTop = data;
             state.newsTop.splice(0, data.length - 3);
         }
+        if (state.route === '/news/:newsId') {
+            // console.log('store>>>', state.news);
+            for (var i = 0; i < state.news.length; i++) {
+                // console.log('store>>>', state.news[i].id, state.routerParamsId);
+                if (state.news[i].id === state.routerParamsId) {
+                    state.dataParamItems = state.news[i];
+                }
+            }
+        }
         // console.log('store', data);
+        this.emitChangeToModuleListeners();
+    },
+    getVideo: function (data) {
+        state.video = data;
+        if (data.length <= 3) {
+            state.videoTop = data;
+        }
+        else if (data.length > 3) {
+            state.videoTop = data;
+            state.videoTop.splice(0, data.length - 3);
+        }
         this.emitChangeToModuleListeners();
     },
     openModal: function (data) {

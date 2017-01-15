@@ -41,7 +41,7 @@ var NewsBox = React.createClass({
                         <h3>{prop.title}</h3>
                         <p>{discription}</p>
                         <div className="lineNews"></div>
-                        <a href="">Подробнее...</a>
+                        <Link to={`/news/${prop.id}`} >Подробнее...</Link>
                     </div>
                 </div>
             );

@@ -76,6 +76,7 @@ var Modal = React.createClass({
                             <div className="footerModal">
                                 <p>{this.state.dataModal.data.description}</p>
                             </div>
+                            <div style={{clear: 'both', float: 'none', width: '100%', height: '0px', padding: '0px', margin: '0px', display: 'block'}}></div>
                         </div>
                     </div>
                 );

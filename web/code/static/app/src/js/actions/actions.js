@@ -24,6 +24,9 @@ var Action = {
                 else if (params === 'indicator') {
                     AppStores.getIndicator(data);
                 }
+                else if (params === 'video') {
+                    AppStores.getVideo(data);
+                }
             },
             function (err) {
                 console.error(err);
@@ -62,6 +65,9 @@ var Action = {
     },
     updateRoute: function (data) {
         AppStores.updateRoute(data);
+    },
+    getRouterParams: function (data) {
+        AppStores.getRouterParams(data);
     }
 }
 

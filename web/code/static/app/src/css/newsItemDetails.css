@@ -1,0 +1,20 @@
+.itemNewsDetailBox {
+    padding: 30px 0;
+}
+.itemNewsDetailBody {
+    width: 1170px;
+    margin: auto;
+}
+.itemNewsDetailBody > h1 {
+    font-size: 50px;
+}
+.itemNewsDetailBody > p {
+
+}
+.itemNewsDetailBody > img {
+    width: 100%;
+    margin: 20px 0px;
+}
+.itemNewsDetailBody > span {
+    color: rgb(210,210,210);
+}

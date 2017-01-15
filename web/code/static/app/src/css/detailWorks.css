@@ -1,0 +1,41 @@
+.boxWorksDetail {
+
+}
+.worksDetailsBody {
+
+}
+.portfolioBox > div.titleBoxDetailNews {
+    padding: 0px 19px;
+    width: 100%;
+    height: initial;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 16px;
+    padding: 0px 20px;
+    width: 1129px;
+}
+.worksDetailsBody.portfolioBox > div.titleBoxDetailNews {
+    padding: 0px 19px;
+    width: 100%;
+    height: initial;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 16px;
+    padding: 0px 20px;
+    width: 1129px;
+    margin-top: 15px;
+
+}
+.worksDetailsBody > .titleBoxDetailNews > h1 {
+    text-align: center;
+    border-bottom: 1px solid #ededed;
+    margin: 0px;
+    width: 1129px;
+}
+
+
+
+
+
+
+

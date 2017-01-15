@@ -89,7 +89,7 @@ class CommentSerializer(serializers.ModelSerializer):
 class VideoSerializer(serializers.ModelSerializer):
     dt = serializers.SerializerMethodField('get_datetime')
     class Meta:
-        model = models.News
+        model = models.Video
         fields = (
             'id',
             'title',

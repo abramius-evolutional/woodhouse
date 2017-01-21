@@ -35,7 +35,7 @@
         background: #fff;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .newsDetailBody {
         width: calc(100% - 0px);
         /* height: 10px; */

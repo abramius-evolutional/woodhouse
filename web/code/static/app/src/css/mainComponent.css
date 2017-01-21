@@ -10,10 +10,11 @@ body
 {
     /* height: initial; */
     /* background: green; */
-    position: fixed;
+    /*position: fixed;*/
     top: 0px;
     left: 0px;
     bottom: 0px;
+    min-width: 736px;
     right: 0px;
     overflow: auto;
 
@@ -41,14 +42,16 @@ body
 .service
 {
     /*border: 1px dashed;*/
+    background: #fff;
 }
 .portfolio
 {
     /*border: 1px dashed;*/
+    background: #fff;
 }
 .news
 {
-    background: url(/static/img/news.jpg) no-repeat top;
+    background: url(/static/img/news.jpg) no-repeat top #fff;
     background-size: 100%;
 }
 .orderBox
@@ -89,10 +92,12 @@ body
 .reviews
 {
     /*border: 1px dashed;*/
+    background: #fff;
 }
 .footer
 {
     /*border: 1px dashed;*/
+    background: #fff;
 }
 .indentsMainsComponents
 {
@@ -121,6 +126,7 @@ body
 .company {
     padding: 30px 0;
     /*border: 1px dashed;*/
+    background: #fff;
 }
 .modalBackground {
     position: fixed;
@@ -472,7 +478,7 @@ body
         background-size: 128%;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .orderBox {
         background: url(/static/img/forms.jpg) no-repeat top;
         background-size: 128%;
@@ -500,5 +506,11 @@ body
     .is_overlay {
         display: none;
     }
+    .companyImage {
+        display: none;
+    }
 }
-
+body
+{
+    min-width: 736px;
+}

@@ -211,7 +211,7 @@
         padding-top: 0px;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .portfolioBox {
         width: 100%;
         /* height: 500px; */

@@ -62,7 +62,7 @@
         min-height: 10px;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .footerBox {
         width: 100%;
         margin: auto;

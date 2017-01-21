@@ -192,7 +192,7 @@
         text-transform: uppercase;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .orderBox {
         background: url(/static/img/forms.jpg) no-repeat top;
         background-size: 128%;

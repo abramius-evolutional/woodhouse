@@ -102,7 +102,7 @@
         padding-left: 73px;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .orderBox > div {
         width: 100%;
         padding-bottom: 20px;

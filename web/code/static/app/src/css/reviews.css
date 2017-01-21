@@ -148,7 +148,7 @@
         font-size: 13px;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .reviewsBox {
         width: 100%;
         margin: auto;

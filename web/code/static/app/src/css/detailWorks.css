@@ -33,7 +33,7 @@
     width: 1129px;
 }
 
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .worksDetailsBody.portfolioBox > div.titleBoxDetailNews {
         padding: 0px 19px;
         width: calc(100% - 40px);
@@ -45,11 +45,13 @@
         /*width: 1129px;*/
         margin-top: 15px;
     }
+
     .worksDetailsBody > .titleBoxDetailNews > h1 {
         text-align: center;
         border-bottom: 1px solid #ededed;
         margin: 0px;
-         width: 100%;
+        width: 100%;
+    }
 }
 
 

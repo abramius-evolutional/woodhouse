@@ -75,7 +75,7 @@
         height: 335px;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .boxCompany {
         width: calc(100% - 10px);
         margin: auto;

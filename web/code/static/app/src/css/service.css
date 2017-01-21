@@ -76,7 +76,7 @@ div.infoBoxService li{
         margin: auto;
     }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 100px) {
     .serviceBox {
         width: 100%;
         margin: auto;

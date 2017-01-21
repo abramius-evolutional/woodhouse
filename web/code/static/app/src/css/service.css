@@ -76,3 +76,26 @@ div.infoBoxService li{
         margin: auto;
     }
 }
+@media (max-width: 900px) and (min-width: 700px) {
+    .serviceBox {
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    .svgServiceBox {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .itemService > span {
+        font-size: 10px;
+    }
+    .itemService {
+        width: 184px;
+        height: 134px;
+        display: inline-table;
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: help;
+    }
+}

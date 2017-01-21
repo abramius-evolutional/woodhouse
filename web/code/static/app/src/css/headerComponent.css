@@ -192,3 +192,49 @@
         text-transform: uppercase;
     }
 }
+@media (max-width: 900px) and (min-width: 700px) {
+    .orderBox {
+        background: url(/static/img/forms.jpg) no-repeat top;
+        background-size: 128%;
+    }
+    .headerBox {
+        width: 100%;
+        margin: auto;
+    }
+    .headerTitle > h2 {
+        display: inline-block;
+        font-size: 25px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+    .logoBox {
+        float: left;
+        width: 336px;
+        height: 100px;
+    }
+    .logo {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: url(/static/img/002.svg) no-repeat center;
+        background-size: 100px;
+    }
+    .headerTitle > p {
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-size: x-small;
+    }
+    .orderDiscription {
+        width: 100%;
+        margin-top: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12px;
+        font-weight: lighter;
+        margin-bottom: 0px;
+    }
+    /*.is_overlay {*/
+        /*display: none;*/
+    /*}*/
+}

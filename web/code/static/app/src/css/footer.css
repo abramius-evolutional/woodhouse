@@ -55,3 +55,17 @@
     font-size: 10px !important;
     margin-top: 36px !important;
 }
+@media screen and (max-width: 1170px) {
+    .footerBox {
+        width: 900px;
+        margin: auto;
+        min-height: 10px;
+    }
+}
+@media (max-width: 900px) and (min-width: 700px) {
+    .footerBox {
+        width: 100%;
+        margin: auto;
+        min-height: 10px;
+    }
+}

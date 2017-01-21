@@ -18,3 +18,10 @@
 .itemNewsDetailBody > span {
     color: rgb(210,210,210);
 }
+@media screen and (max-width: 1170px) {
+    .itemNewsDetailBody {
+        width: calc(100% - 40px);
+        padding: 20px;
+        margin: auto;
+    }
+}

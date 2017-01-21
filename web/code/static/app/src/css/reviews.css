@@ -18,7 +18,7 @@
 }
 .reviewsList > li {
     width: 48.7%;
-    height: 179px;
+    height: 159px;
     margin-bottom: 30px;
     display: inline-block;
     background: rgb(50,50,50);
@@ -56,23 +56,24 @@
     height: 100%;
 }
 .reviewsList > li > div {
-    width: calc(100% - 170px);
+    width: calc(100% - 210px);
     display: inline-block;
-    height: 179px;
+    height: 139px;
     position: relative;
+    padding: 10px;
 }
 .reviewsList > li > div > h4 {
-    margin-left: 23px;
     font-size: 19px;
     margin-bottom: 10px;
+    margin-top: 0px;
 }
 .reviewsList > li > div > p {
-    margin-left: 23px;
+    /*margin-left: 23px;*/
     color: #72758a;
 }
 .reviewsList > li > div > a {
     float: right;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     font-size: 14px;
     color: #ffed97;
     transition: color .3s;
@@ -123,9 +124,63 @@
         margin-left: 22px;
     }
     .reviewsList > li > div > h4 {
-        margin-left: 23px;
         font-size: 19px;
         margin-bottom: 10px;
-        margin-top: 10px;
+        margin-top: 0px;
+    }
+    .reviewsList > li > div.revImageBox {
+        width: 160px;
+        float: left;
+        background: rgba(0,0,0,.4);
+        position: relative;
+        overflow: hidden;
+    }
+    .reviewsList > li > div {
+        width: calc(100% - 200px);
+        display: inline-block;
+        height: 139px;
+        position: relative;
+        padding: 10px;
+    }
+    .reviewsList > li > div > p {
+        /* margin-left: 23px; */
+        color: #72758a;
+        font-size: 13px;
+    }
+}
+@media (max-width: 900px) and (min-width: 700px) {
+    .reviewsBox {
+        width: 100%;
+        margin: auto;
+        min-height: 100px;
+    }
+    .reviewsList > li {
+        width: 76.7%;
+        height: 125px;
+        margin: auto;
+        margin-bottom: 30px;
+        display: block;
+        background: rgb(50,50,50);
+        color: #fff;
+    }
+    .reviewsList > li > div.revImageBox {
+        height: 105px;
+    }
+    .reviewsBox > a > button {
+        width: 123px;
+        margin-top: 30px;
+        height: 28px;
+        border-radius: 55px;
+        background: rgba(0,0,0,0);
+        border: 1px solid #000;
+        font-size: 13px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: lighter;
+        transition: background 0.4s, color 0.4s;
+        cursor: pointer;
+        outline: 0px;
+        margin: auto;
+        display: block;
     }
 }

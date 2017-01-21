@@ -119,6 +119,7 @@
     margin: auto;
     margin-top: 30px;
     margin-bottom: 24px;
+    width: 330px;
 }
 .newsBox > a > button{
     width: 330px;
@@ -170,6 +171,49 @@
         -ms-transition: background .5s;
         -o-transition: background .5s;
         transition: background .5s;
-        height: 359px;
+        height: 447px;
+    }
+}
+@media (max-width: 900px) and (min-width: 700px) {
+    .newsBox {
+        width: 100%;
+        margin: auto;
+        padding: 10px 0px;
+    }
+    .newsBoxItem {
+        margin-top: 30px;
+        width: 338px;
+        display: inline-block;
+        height: 639px;
+        /* padding: 15px; */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .newsBoxItem > div:nth-child(2) {
+        padding: 15px;
+        background: #222431;
+        -webkit-transition: background .5s;
+        -moz-transition: background .5s;
+        -ms-transition: background .5s;
+        -o-transition: background .5s;
+        transition: background .5s;
+        height: 368px;
+    }
+    .newsBox > a > button {
+        width: 117px;
+        margin-top: 30px;
+        height: 28px;
+        border-radius: 55px;
+        background: rgba(0,0,0,0);
+        border: 1px solid #000;
+        font-size: 13px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: lighter;
+        transition: background 0.4s, color 0.4s;
+        cursor: pointer;
+        outline: 0px;
+        margin: auto;
+        display: block;
     }
 }

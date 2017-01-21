@@ -59,12 +59,33 @@ body
 .backgroundHeader {
     background: url(/static/img/background.png) no-repeat center;
 }
-@media screen and (max-width: 1170px) {
-    .orderBox {
-        background: url(/static/img/forms.jpg) no-repeat top;
-        background-size: 128%;
-    }
-}
+/*@media screen and (max-width: 1170px) {*/
+    /*.orderBox {*/
+        /*background: url(/static/img/forms.jpg) no-repeat top;*/
+        /*background-size: 128%;*/
+    /*}*/
+/*}*/
+/*@media (max-width: 900px) and (min-width: 700px) {*/
+    /*.orderBox {*/
+        /*background: url(/static/img/forms.jpg) no-repeat top;*/
+        /*background-size: 128%;*/
+    /*}*/
+    /*.is_overlay {*/
+        /*!*display: none;*!*/
+    /*}*/
+    /*.indentsMainsComponents {*/
+        /*padding: 0px 0;*/
+    /*}*/
+/*}*/
+/*@media (max-width: 700px) {*/
+    /*.orderBox {*/
+        /*background: url(/static/img/forms.jpg) no-repeat top;*/
+        /*background-size: 128%;*/
+    /*}*/
+    /*.is_overlay {*/
+        /*display: none;*/
+    /*}*/
+/*}*/
 .reviews
 {
     /*border: 1px dashed;*/
@@ -76,6 +97,15 @@ body
 .indentsMainsComponents
 {
     padding: 30px 0;
+}
+.about
+{
+    width: 100%;
+    /*height: 1400px;*/
+    background: url(/static/img/about.jpg) no-repeat bottom #fff;
+    background-size: 100%;
+    padding: 0px;
+    padding-bottom: 30px;
 }
 .row {
     width: 100%;
@@ -434,4 +464,41 @@ body
         font-size: .8em;
         padding: 5px 10px; } }
 
+
+
+@media screen and (max-width: 1170px) {
+    .orderBox {
+        background: url(/static/img/forms.jpg) no-repeat top;
+        background-size: 128%;
+    }
+}
+@media (max-width: 900px) and (min-width: 700px) {
+    .orderBox {
+        background: url(/static/img/forms.jpg) no-repeat top;
+        background-size: 128%;
+    }
+    .is_overlay {
+        /*display: none;*/
+    }
+    .indentsMainsComponents {
+        padding: 0px 0;
+    }
+    .about {
+        width: 100%;
+        height: 722px;
+        background: url(/static/img/about.jpg) no-repeat bottom #fff;
+        background-size: 100%;
+        padding: 0px;
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 700px) {
+    .orderBox {
+        background: url(/static/img/forms.jpg) no-repeat top;
+        background-size: 128%;
+    }
+    .is_overlay {
+        display: none;
+    }
+}
 

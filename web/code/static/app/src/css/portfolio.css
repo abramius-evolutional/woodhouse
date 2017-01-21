@@ -181,4 +181,67 @@
         border-top: 1px solid;
         display: block;
     }
+    .portfolioBox > div > div.boxDiscription {
+        height: 301px;
+    }
+    .portfolioBox > div > div > p {
+        height: inherit;
+    }
+    .modalBox {
+        width: calc(100% - 40px);
+        /* height: 300px; */
+        background: #fff;
+        margin: auto;
+        /* margin-top: 20px; */
+        padding: 20px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        border-radius: 3px;
+    }
+    .boxImage {
+        width: 60%;
+        float: left;
+    }
+    .footerModal {
+        padding-top: 10px;
+        /* border-top: 1px solid rgb(227,227,227); */
+        width: calc(100% - 63%);
+        float: left;
+        padding: 10px;
+        padding-top: 0px;
+    }
+}
+@media (max-width: 900px) and (min-width: 700px) {
+    .portfolioBox {
+        width: 100%;
+        /* height: 500px; */
+        margin: auto;
+        padding: 10px 0px;
+    }
+    .portfolioBox > div {
+        width: 205px;
+        height: 500px;
+        display: inline-block;
+        margin: 0px 20px;
+        overflow: hidden;
+    }
+    .portfolioBox > a > button {
+        width: 160px;
+        margin-top: 30px;
+        height: 28px;
+        border-radius: 55px;
+        background: rgba(0,0,0,0);
+        border: 1px solid #000;
+        font-size: 13px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: lighter;
+        transition: background 0.4s, color 0.4s;
+        cursor: pointer;
+        outline: 0px;
+        margin: auto;
+        display: block;
+        /* margin-top: 30px; */
+        /* margin-bottom: 24px; */
+    }
 }

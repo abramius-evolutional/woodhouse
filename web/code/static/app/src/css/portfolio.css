@@ -244,4 +244,8 @@
         /* margin-top: 30px; */
         /* margin-bottom: 24px; */
     }
+    .portfolioBox > div > div > p {
+        height: 224px;
+        font-size: 13px;
+    }
 }

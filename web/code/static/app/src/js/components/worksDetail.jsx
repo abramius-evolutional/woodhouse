@@ -37,7 +37,7 @@ var WorksDetail = React.createClass({
         var worksNode = this.state.works.map(function (prop, id) {
             var description = prop.description;
             if (prop.description.length > 200) {
-                description = prop.description.substring(0, 200)
+                description = prop.description.substring(0, 200) + '...';
             }
             function onclickWork() {
                 func(prop);

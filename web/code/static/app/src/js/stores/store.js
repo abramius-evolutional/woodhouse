@@ -112,12 +112,12 @@ var AppStore = assign({}, EventEmitter.prototype, {
         this.emitChangeToModuleListeners();
     },
 	getWork: function (data) {
-        state.works = data;
+        state.works = JSON.parse(JSON.stringify(data));
         if (data.length <= 3) {
             state.newWorks = data;
         }
         else if (data.length > 3) {
-            state.newWorks = data;
+            state.newWorks = JSON.parse(JSON.stringify(data));
             state.newWorks.splice(0, data.length - 3);
         }
         if(state.route === '/works/:workId') {

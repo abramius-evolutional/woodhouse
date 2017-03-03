@@ -33,6 +33,7 @@ var WorksDetail = React.createClass({
         // console.log('portfolio', e);
     },
     render: function () {
+        // console.log('portfolio', this.state.works, this.state.newWorks);
         var func = this.onClickWorks;
         var worksNode = this.state.works.map(function (prop, id) {
             var description = prop.description;

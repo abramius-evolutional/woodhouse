@@ -79,9 +79,9 @@ var App = React.createClass({
         // }
     },
     componentDidMount: function () {
-        console.log('main', this.props.routes);
+        // console.log('main', this.props.routes);
         if (this.props.routes[2] !== undefined) {
-            console.log('main', this.props.routes, this.props.routes[2].path, document.location.pathname.split('/')[2]);
+            // console.log('main', this.props.routes, this.props.routes[2].path, document.location.pathname.split('/')[2]);
             this.internalState.statusLocation = this.props.routes[2].path;
             var dataParams = {
                 pathPouter: this.props.routes[2].path,

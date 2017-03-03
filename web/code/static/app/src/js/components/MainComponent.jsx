@@ -52,9 +52,13 @@ var Main = React.createClass({
     render: function() {
         // console.log('main', this.state.router);
         if (this.state.router === '/') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents'>
                             <HeaderComponent/>
                             <div id="trailer" className="is_overlay">
@@ -97,9 +101,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/about') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
                         </div>
@@ -113,9 +121,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/news') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
@@ -130,9 +142,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/news/:newsId') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
@@ -147,9 +163,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/reviews') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
@@ -164,9 +184,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/reviews/:rewId') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
@@ -181,9 +205,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/works') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
@@ -198,9 +226,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/works/:workId') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 
@@ -215,9 +247,13 @@ var Main = React.createClass({
             );
         }
         else if (this.state.router === '/video') {
+            var elem = document.getElementById('bodyBox');
+            if (elem !== null) {
+                elem.scrollIntoView(true);
+            }
             return (
                 <div>
-                    <div className='bodyBox' >
+                    <div id="bodyBox" className='bodyBox' >
                         <div className='header indentsMainsComponents backgroundHeader'>
                             <HeaderaDetails/>
 

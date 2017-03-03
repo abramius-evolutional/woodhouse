@@ -19,7 +19,7 @@
     height: 233px;
     overflow: hidden;
 }
-.portfolioBox > div > div > img {
+.portfolioBox > div > div > a > img {
     /* height: 262px; */
     margin: auto;
     /* text-align: center; */

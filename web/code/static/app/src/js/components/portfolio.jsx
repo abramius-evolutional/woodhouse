@@ -42,18 +42,21 @@ var Portfolio = React.createClass({
             function onclickWork() {
                 func(prop);
             }
+            var styleH3 = null;
+            if (prop.title.length > 30) {
+                styleH3 = {fontSize: '14px'};
+            }
             return(
                 <div key={id} className="portfolioItem">
                     <div>
-                        <img src={prop.url[0]} alt={prop.title}/>
+                        <Link to={`/works/${prop.id}`}>
+                            <img src={prop.url[0]} alt={prop.title}/>
+                        </Link>
                     </div>
                     <div className="boxDiscription">
-                        <h3>{prop.title}</h3>
+                        <h3 style={styleH3}>{prop.title}</h3>
                         <p>
                             {description}
-                            <Link to={`/works/${prop.id}`}>
-                                <button type="button" className="aboutMore">...</button>
-                            </Link>
                         </p>
                     </div>
                 </div>

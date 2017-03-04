@@ -36,13 +36,18 @@ var NewsBox = React.createClass({
             }
             return(
                 <div key={id} className="newsBoxItem">
-                    <div><img src={prop.url[0]} alt={prop.title}/></div>
-                    <div>
-                        <h3>{prop.title}</h3>
-                        <p>{discription}</p>
-                        <div className="lineNews"></div>
-                        <Link to={`/news/${prop.id}`} >Подробнее...</Link>
-                    </div>
+                    <Link to={`/news/${prop.id}`}>
+                        <div style={{height: '171px'}}>
+                            <div style={{height: '100%', width: '0px',display: 'inline-block', verticalAlign: 'middle'}}></div>
+                            <img src={prop.url[0]} alt={prop.title}/>
+                        </div>
+                        <div>
+                            <h3>{prop.title}</h3>
+                            <p>{discription}</p>
+                            <div className="lineNews"></div>
+                            <Link to={`/news/${prop.id}`} >Подробнее...</Link>
+                        </div>
+                    </Link>
                 </div>
             );
         })

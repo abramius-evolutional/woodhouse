@@ -75,7 +75,7 @@ var Form = React.createClass({
                 <input value={this.state.valueName} style={{borderBottomColor: this.state.borderName}} onChange={this.onChangeName} placeholder='Введите имя' type='text'/>
                 <input value={this.state.valuePhone} style={{borderBottomColor: this.state.borderPhone}} onChange={this.onChangePhone} placeholder='Введите телефон' type='text'/>
                 <input value={this.state.valueEmail} style={{borderBottomColor: this.state.borderEmail}} onChange={this.onChangeEmail} placeholder='Введите e-mail' type='text'/>
-                <button onClick={this.onSubmitCalculation} type="button">Отправить заявку на расчет</button>
+                <button onClick={this.onSubmitCalculation} type="button">Отправить заявку</button>
             </form>
         );
     }

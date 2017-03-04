@@ -91,7 +91,7 @@ var Form = React.createClass({
         return(
             <div>
                 <form className='formHeader'>
-                    <h3>Закажите проектирование дома!</h3>
+                    <h3>Закажите примерный расчет сметы</h3>
                     <div className="row">
                         <div className="boxInput">
                             <input style={{borderBottomColor: this.state.borderName}} value={this.state.valueName} onChange={this.onChangeName} placeholder='Введите имя' type='text'/>

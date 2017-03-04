@@ -118,7 +118,8 @@ var AppStore = assign({}, EventEmitter.prototype, {
         }
         else if (data.length > 3) {
             state.newWorks = JSON.parse(JSON.stringify(data));
-            state.newWorks.splice(0, data.length - 3);
+            state.newWorks = state.newWorks.slice(data.length - 4, data.length - 1);
+            console.log("logloglog",state.newWorks)
         }
         if(state.route === '/works/:workId') {
             for (var i = 0; i < state.works.length; i++) {

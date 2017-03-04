@@ -10,12 +10,12 @@ var Service = React.createClass({
                 <div className="svgServiceBox">
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/1.svg) no-repeat center'}}></div>
-                        <span>СОЗДАНИЕ ИНДИВИДУАЛЬНОГО ПРОЕКТА, ДИЗАЙНА.</span>
+                        <span>СОЗДАНИЕ ИНДИВИДУАЛЬНОГО ПРОЕКТА, ДИЗАЙНА</span>
                         <div className="infoBoxService">
-                            <h3>СОЗДАНИЕ ИНДИВИДУАЛЬНОГО ПРОЕКТА, ДИЗАЙНА.</h3>
+                            <h3>СОЗДАНИЕ ИНДИВИДУАЛЬНОГО ПРОЕКТА, ДИЗАЙНА</h3>
                             <ul>
                                 <li>проектирование любой сложности</li>
-                                <li>скизный проект, 3D визуализация</li>
+                                <li>эскизный проект, 3D визуализация</li>
                                 <li>рабочий проект</li>
                                 <li>рабочие чертежи, инженерные расчеты</li>
                             </ul>
@@ -23,11 +23,11 @@ var Service = React.createClass({
                     </div>
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/4.svg) no-repeat center'}}></div>
-                        <span>ОТБОР И ПОДГОТОВКА КАЧЕСТВЕННОГО ЛЕСА.</span>
+                        <span>ОТБОР И ПОДГОТОВКА КАЧЕСТВЕННОГО ЛЕСА</span>
                         <div className="infoBoxService">
-                            <h3>ОТБОР И ПОДГОТОВКА КАЧЕСТВЕННОГО ЛЕСА.</h3>
+                            <h3>ОТБОР И ПОДГОТОВКА КАЧЕСТВЕННОГО ЛЕСА</h3>
                             <ul>
-                                <li>щательный отбор леса при покупке</li>
+                                <li>тщательный отбор леса при покупке</li>
                                 <li>ручная обработка</li>
                                 <li>антисептирование</li>
                             </ul>
@@ -35,9 +35,9 @@ var Service = React.createClass({
                     </div>
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/3.svg) no-repeat center'}}></div>
-                        <span>ИЗГОТОВЛЕНИЕ СРУБА ИЛИ КАРКАСА POST & BEAM НА НАШЕЙ СТРОЙПЛОЩАДКЕ.</span>
+                        <span>ИЗГОТОВЛЕНИЕ СРУБА ИЛИ КАРКАСА POST & BEAM НА НАШЕЙ СТРОЙПЛОЩАДКЕ</span>
                         <div className="infoBoxService">
-                            <h3>ИЗГОТОВЛЕНИЕ СРУБА ИЛИ КАРКАСА POST & BEAM НА НАШЕЙ СТРОЙПЛОЩАДКЕ.</h3>
+                            <h3>ИЗГОТОВЛЕНИЕ СРУБА ИЛИ КАРКАСА POST & BEAM НА НАШЕЙ СТРОЙПЛОЩАДКЕ</h3>
                             <ul>
                                 <li>рубка сруба по разным технологиям</li>
                                 <li>в русскую классическую чашку</li>
@@ -45,15 +45,16 @@ var Service = React.createClass({
                                 <li>в канадскую чашку (бриллиантовый угол) с верхними
                                     и нижними затесами</li>
                                 <li>лафет с норвежской чашкой</li>
+                                <li>скрайбинг - завешивание в пазах</li>
                                 <li>каркасно-бревенчатая технология post & beam</li>
                             </ul>
                         </div>
                     </div>
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/6.svg) no-repeat center'}}></div>
-                        <span>ТРАНСПОРТИРОВКА ДО МЕСТА НАЗНАЧЕНИЯ.</span>
+                        <span>ТРАНСПОРТИРОВКА ДО МЕСТА НАЗНАЧЕНИЯ</span>
                         <div className="infoBoxService">
-                            <h3>ТРАНСПОРТИРОВКА ДО МЕСТА НАЗНАЧЕНИЯ.</h3>
+                            <h3>ТРАНСПОРТИРОВКА ДО МЕСТА НАЗНАЧЕНИЯ</h3>
                             <ul>
                                 <li>бережная погрузка на еврофуры</li>
                                 <li>разгрузка на заранее подготовленное место</li>
@@ -62,9 +63,9 @@ var Service = React.createClass({
                     </div>
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/7.svg) no-repeat center'}}></div>
-                        <span>СБОРКА СРУБА / МОНТАЖ КОНСТРУКЦИИ НА ФУНДАМЕНТ.</span>
+                        <span>СБОРКА СРУБА / МОНТАЖ КОНСТРУКЦИИ НА ФУНДАМЕНТ</span>
                         <div className="infoBoxService">
-                            <h3>СБОРКА СРУБА / МОНТАЖ КОНСТРУКЦИИ НА ФУНДАМЕНТ.</h3>
+                            <h3>СБОРКА СРУБА / МОНТАЖ КОНСТРУКЦИИ НА ФУНДАМЕНТ</h3>
                             <ul>
                                 <li>сборка сруба с межвенцовым утеплителем</li>
                                 <li>монтаж конструкции post & beam с металлоэлементами и специальным утеплителем для узлов</li>
@@ -84,9 +85,9 @@ var Service = React.createClass({
                     </div>
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/2.svg) no-repeat center'}}></div>
-                        <span>ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ.</span>
+                        <span>ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ</span>
                         <div className="infoBoxService">
-                            <h3>ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ.</h3>
+                            <h3>ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ</h3>
                             <ul>
                                 <li>шлифовка</li>
                                 <li>покраска</li>
@@ -98,12 +99,12 @@ var Service = React.createClass({
                     </div>
                     <div className="itemService">
                         <div style={{background: 'url(/static/img/5.svg) no-repeat center'}}></div>
-                        <span>ГАРАНТИИ И ДАЛЬНЕЙШЕЕ ОБСЛУЖИВАНИЕ.</span>
+                        <span>ГАРАНТИИ И ДАЛЬНЕЙШЕЕ ОБСЛУЖИВАНИЕ</span>
                         <div className="infoBoxService">
-                            <h3>ГАРАНТИИ И ДАЛЬНЕЙШЕЕ ОБСЛУЖИВАНИЕ.</h3>
+                            <h3>ГАРАНТИИ И ДАЛЬНЕЙШЕЕ ОБСЛУЖИВАНИЕ</h3>
                             <ul>
                                 <li>следим за усадкой сруба</li>
-                                <li>обслуживаем сруб до полной полной усадки</li>
+                                <li>обслуживаем сруб до полной усадки</li>
                             </ul>
                         </div>
                     </div>

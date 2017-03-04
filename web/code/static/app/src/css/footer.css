@@ -39,6 +39,12 @@
 .iconBox > div {
 
 }
+.socialIcons > * {
+    margin-top: 36px;
+    display: inline-block;
+    color: #1b877e;
+    margin-left: 20px;
+}
 .footerText {
     color: #000 !important;
 }

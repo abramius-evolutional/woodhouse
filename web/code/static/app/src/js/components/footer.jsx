@@ -51,7 +51,8 @@ var Footer = React.createClass({
                         </a>
                     </div>
                     <div className="socialIcons">
-
+                        <a href="http://instagram.com/pozin.project" target="blanck"><i className="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/channel/UCr1Hc-j1n_NPcUyCOZGmh_w/feed" target="blanck"><i className="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
                     </div>
                     <div></div>
                     <div style={{clear: 'both'}}></div>

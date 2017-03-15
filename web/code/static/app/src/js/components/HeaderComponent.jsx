@@ -80,12 +80,12 @@ var Header = React.createClass({
                     <h2>настоящих бревенчатых домов</h2>
                     <p>создаем деревянные дома из сибирского леса под ключ</p>
                 </div>
-                <div className='orderDiscription'>
-                    <span>ОСТАВЬТЕ ЗАЯВКУ ПРЯМО СЕЙЧАС И мы с вами свяжемся</span>
-                    <div>
-                        <Form/>
-                    </div>
-                </div>
+                {/*<div className='orderDiscription'>*/}
+                    {/*<span>ОСТАВЬТЕ ЗАЯВКУ ПРЯМО СЕЙЧАС И мы с вами свяжемся</span>*/}
+                    {/*/!*<div>*!/*/}
+                        {/*/!*<Form/>*!/*/}
+                    {/*/!*</div>*!/*/}
+                {/*</div>*/}
             </div>
         );
     }

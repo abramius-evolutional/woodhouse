@@ -71,8 +71,8 @@ var Main = React.createClass({
                         <div className='about indentsMainsComponents'>
                             <About/>
                         </div>
-                        <div className='presentationBox'>
-                            <Presentstion />
+                        <div className="company">
+                            <Company/>
                         </div>
                         <div className='service indentsMainsComponents'>
                             <Service />
@@ -85,9 +85,6 @@ var Main = React.createClass({
                         </div>
                         <div className='news indentsMainsComponents'>
                             <NewsBox />
-                        </div>
-                        <div className="company">
-                            <Company/>
                         </div>
                         <div className='reviews indentsMainsComponents'>
                             <Reviews />

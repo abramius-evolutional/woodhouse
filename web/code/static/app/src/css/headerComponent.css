@@ -94,12 +94,11 @@
 .headerTitle
 {
     line-height: 3px;
-
     width: 100%;
-
     text-align: center;
-
     color: #fff;
+    margin-top: 200px;
+    margin-bottom: 176px;
 }
 .headerTitle > h2
 {

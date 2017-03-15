@@ -173,12 +173,12 @@ var AppStore = assign({}, EventEmitter.prototype, {
     },
     getVideo: function (data) {
         state.video = data;
-        if (data.length <= 3) {
+        if (data.length <= 6) {
             state.videoTop = data;
         }
-        else if (data.length > 3) {
+        else if (data.length > 6) {
             state.videoTop = data;
-            state.videoTop.splice(0, data.length - 3);
+            state.videoTop.splice(0, data.length - 6);
         }
         this.emitChangeToModuleListeners();
     },
